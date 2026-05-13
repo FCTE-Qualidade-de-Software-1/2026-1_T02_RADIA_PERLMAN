@@ -174,3 +174,15 @@ O modelo adaptado dirige as decisões das seções seguintes:
 - **Fases 2 a 4** vão derivar métricas, instrumentos e critérios de aceitação a partir
   **somente das folhas marcadas como `✓` ou `~`**, garantindo rastreabilidade entre
   modelo, métrica e resultado.
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                              | Revisor(es)                              |
+|--------|------------|--------------------------|----------------------------------------|------------------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Ana Joyce, Julia Vitória, Luis Lima    | Davi Casseb, Letícia Hladczuk, Samuel Afonso |
+
+## Referências
+
+1. ISO/IEC 25010:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): System and software quality models*. International Organization for Standardization, 2011.
+2. ISO/IEC 25040:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process*. International Organization for Standardization, 2011.
+3. ISO/IEC 25000:2014. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Guide to SQuaRE*. International Organization for Standardization, 2014.
