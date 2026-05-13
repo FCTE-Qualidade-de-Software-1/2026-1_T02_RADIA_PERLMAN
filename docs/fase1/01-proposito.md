@@ -83,3 +83,15 @@ A escolha do propósito tem três implicações imediatas sobre o restante da Fa
 - **Sobre o vínculo com ODS** ([§7](07-ods.md)): por se tratar de produto universitário
   voltado à comunidade da UnB, os ODS pertinentes orientam a interpretação dos resultados
   em termos de **impacto institucional e social**, não apenas técnico.
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                              | Revisor(es)                       |
+|--------|------------|--------------------------|----------------------------------------|-----------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Davi Casseb, Ana Joyce, Samuel Afonso  | Letícia Hladczuk, Julia Vitória, Luis Lima |
+
+## Referências
+
+1. ISO/IEC 25010:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): System and software quality models*. International Organization for Standardization, 2011.
+2. ISO/IEC 25040:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process*. International Organization for Standardization, 2011.
+3. AcheiUnB. *Repositório do projeto da disciplina MDS/UnB 2024-2*. Disponível em: <https://github.com/unb-mds/2024-2-AcheiUnB>. Acesso em: 13 maio 2026.
