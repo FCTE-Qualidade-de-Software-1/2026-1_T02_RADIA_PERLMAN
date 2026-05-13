@@ -75,7 +75,7 @@ entrevistados, considerados apenas na leitura dos resultados).*
 | Stakeholder | Mecanismo de envolvimento previsto | Frequência |
 |---|---|---|
 | Profa. Cristiane Ramos | Entregas EU1, EU2, EU3 e revisão entre pares no Moodle. | Por entrega. |
-| Equipe T02 | Reuniões internas (atas no repositório), *issues* e *pull requests* no GitHub. | Semanal. |
+| Equipe T02 | Reuniões internas, *issues* e *pull requests* no GitHub. | Semanal. |
 | Equipe AcheiUnB 2024-2 | **Consulta documental** ao repositório e à documentação publicada (sem entrevista nesta fase). | - |
 | Próximas equipes MDS | Recepção dos artefatos publicados (GitPage + *release*) após a Fase 4. | Pós-entrega. |
 | Coordenação MDS/FGA315 | Acesso público à GitPage. | Contínuo. |
@@ -83,11 +83,10 @@ entrevistados, considerados apenas na leitura dos resultados).*
 
 !!! info "Decisão registrada: ausência de entrevistas na Fase 1"
     A Fase 1 **não conduz entrevistas** com a equipe AcheiUnB nem com usuários finais.
-    A premissa do projeto exige que entrevistas, **quando realizadas**, sejam gravadas
-    e auditáveis. Como a equipe T02 optou por basear a avaliação em **análise
-    documental e técnica** do artefato (código, configuração e CI), essa exigência fica
-    vacuamente atendida nesta fase. Caso a Fase 2 venha a incluir entrevistas, as
-    gravações serão publicadas no diretório `atas/` do repositório.
+    A equipe T02 optou por basear a avaliação em **análise documental e técnica** do
+    artefato (código, configuração e CI), sem coleta direta com stakeholders externos.
+    Caso fases futuras venham a incluir entrevistas, os registros correspondentes serão
+    publicados no próprio repositório.
 
 ## Histórico de versão
 

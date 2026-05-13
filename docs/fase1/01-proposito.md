@@ -46,7 +46,7 @@ não apenas uma intenção genérica.
 |---|------------------|-------------|--------------------------|
 | **D1** | Priorização do *backlog* de qualidade do AcheiUnB para o próximo semestre da disciplina MDS. | Equipe atual / próxima do AcheiUnB. | Ranqueamento de itens por característica e por nível de risco residual identificado na Fase 4, com corte por capacidade de equipe (story points). |
 | **D2** | Decisão **manter / refatorar / substituir** sobre componentes específicos: autenticação MSAL+JWT, *secret management*, fila Celery+Redis, módulo de chat em tempo real e camada de testes do frontend. | Equipe atual / próxima do AcheiUnB. | Comparação entre o estado medido na Fase 3 e os critérios de aceitação derivados na Fase 2 (por subcaracterística da ISO/IEC 25010). |
-| **D3** | Avaliação acadêmica da equipe T02 nas entregas EU1, EU2 e EU3 da disciplina FGA315. | Profa. Cristiane Ramos. | Auditoria dos artefatos publicados na GitPage e no repositório (atas, dados brutos, *releases*, rastreabilidade git) à luz dos critérios da rubrica da disciplina. |
+| **D3** | Avaliação acadêmica da equipe T02 nas entregas EU1, EU2 e EU3 da disciplina FGA315. | Profa. Cristiane Ramos. | Auditoria dos artefatos publicados na GitPage e no repositório (dados brutos, *releases*, rastreabilidade git) à luz dos critérios da rubrica da disciplina. |
 
 ## 1.4 Cenário de aplicação
 

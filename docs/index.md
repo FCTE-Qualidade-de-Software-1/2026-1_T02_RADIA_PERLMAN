@@ -13,7 +13,7 @@
 Este site é a **vitrine pública** do trabalho final da disciplina. Aqui ficam reunidos:
 
 - O **relatório técnico** completo, organizado por fase de entrega;
-- Os **artefatos auditáveis** (planilhas, atas, gravações, dados brutos e consolidados) que fundamentam cada decisão;
+- Os **artefatos auditáveis** (planilhas, dados brutos e consolidados) que fundamentam cada decisão;
 - A **rastreabilidade git** (links para repositório, *releases*, *issues* e *pull requests* relevantes);
 - A **declaração de uso de IA** e a **tabela de contribuição da equipe**.
 
@@ -26,7 +26,7 @@ A avaliação segue a abordagem SQuaRE, articulando *propósito*, *partes intere
 | [Fase 1 - EU1](fase1/index.md) | Requisitos da avaliação: propósito, partes interessadas, tipo de produto, modelo de qualidade, características, escopo e ODS. |
 | [Equipe e contribuições](equipe.md) | Integrantes, matrículas e tabela de contribuição. |
 | [Declaração de uso de IA](declaracao-ia.md) | Ferramentas, finalidades e revisões humanas aplicadas. |
-| [Rastreabilidade](rastreabilidade.md) | Links para repositório, *release* EU1, atas e evidências. |
+| [Rastreabilidade](rastreabilidade.md) | Links para repositório, *release* EU1 e evidências. |
 
 ## Sobre o nome da equipe
 
