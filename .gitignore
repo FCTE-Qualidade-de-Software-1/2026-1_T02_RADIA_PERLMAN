@@ -10,3 +10,11 @@ venv/
 *.swp
 .idea/
 .vscode/
+# Build temporário do PDF: ignora tudo, exceto os PNGs dos diagramas Mermaid
+# (versionados para servir de cache entre execuções de scripts/build_pdf.py).
+_pdf_docs/*
+!_pdf_docs/img/
+_pdf_docs/img/*
+!_pdf_docs/img/diagrams/
+_pdf_docs/img/diagrams/*
+!_pdf_docs/img/diagrams/*.png

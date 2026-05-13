@@ -1,0 +1,19 @@
+INHERIT: mkdocs.yml
+
+docs_dir: _pdf_docs
+
+plugins:
+  - search:
+      lang: pt
+  - tags
+  - with-pdf:
+      author: Equipe T02 RADIA PERLMAN
+      cover: true
+      cover_title: Avaliação da Qualidade do AcheiUnB
+      cover_subtitle: FGA315 Qualidade de Software 1 - EU1 - 2026/1
+      toc_title: Sumário
+      output_path: pdf/relatorio-eu1.pdf
+      render_js: false
+      ordered_chapter_level: 0
+      toc_level: 3
+      verbose: false

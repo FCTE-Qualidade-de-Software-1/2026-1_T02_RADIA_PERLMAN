@@ -29,6 +29,21 @@
   text-align: center;
 }
 
+/* Ajustes específicos do PDF (não afetam o site).
+   O WeasyPrint não renderiza os ícones SVG (mask-image) dos admonitions
+   do tema Material, deixando bolinhas coloridas sobre o título. */
+@media print {
+  .md-typeset .admonition-title::before,
+  .md-typeset details > summary::before {
+    display: none !important;
+  }
+
+  .md-typeset .admonition-title,
+  .md-typeset details > summary {
+    padding-left: 0.8rem !important;
+  }
+}
+
 /* Grid de integrantes na página equipe.md (3 em cima, 3 embaixo) */
 .team-grid {
   display: grid;
