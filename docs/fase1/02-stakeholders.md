@@ -88,3 +88,15 @@ entrevistados, considerados apenas na leitura dos resultados).*
     documental e técnica** do artefato (código, configuração e CI), essa exigência fica
     vacuamente atendida nesta fase. Caso a Fase 2 venha a incluir entrevistas, as
     gravações serão publicadas no diretório `atas/` do repositório.
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                                 | Revisor(es)                          |
+|--------|------------|--------------------------|-------------------------------------------|--------------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Letícia Hladczuk, Julia Vitória, Luis Lima | Davi Casseb, Ana Joyce, Samuel Afonso |
+
+## Referências
+
+1. ISO/IEC 25040:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process*. International Organization for Standardization, 2011.
+2. ISO/IEC 25010:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): System and software quality models*. International Organization for Standardization, 2011.
+3. RAMOS, Cristiane. *Plano de Ensino da disciplina FGA315 Qualidade de Software 1*. FCTE/UnB, 2026/1.
