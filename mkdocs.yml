@@ -73,8 +73,6 @@ extra_css:
 
 extra:
   generator: false
-  version:
-    provider: mike
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN
