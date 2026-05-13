@@ -151,3 +151,15 @@ A **continuidade futura** prevista é:
   artefatos desta avaliação como **baseline**.
 - **Replicação do método** sobre outros projetos da disciplina MDS, com matriz de
   priorização da §5 como ponto de partida.
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                              | Revisor(es)                              |
+|--------|------------|--------------------------|----------------------------------------|------------------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Ana Joyce, Letícia Hladczuk, Luis Lima | Davi Casseb, Julia Vitória, Samuel Afonso |
+
+## Referências
+
+1. ISO/IEC 25040:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation process*. International Organization for Standardization, 2011.
+2. ISO/IEC 25041:2012. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): Evaluation guide for developers, acquirers and independent evaluators*. International Organization for Standardization, 2012.
+3. AcheiUnB. *Repositório do projeto da disciplina MDS/UnB 2024-2*. Disponível em: <https://github.com/unb-mds/2024-2-AcheiUnB>. Acesso em: 13 maio 2026.
