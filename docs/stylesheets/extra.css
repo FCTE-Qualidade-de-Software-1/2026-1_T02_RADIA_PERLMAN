@@ -29,21 +29,30 @@
   text-align: center;
 }
 
-/* Grid de integrantes na página equipe.md */
+/* Grid de integrantes na página equipe.md (3 em cima, 3 embaixo) */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2rem 0;
+  justify-items: center;
+}
+
+@media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .team-member {
   text-align: center;
+  max-width: 180px;
 }
 
 .team-member a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 .team-member img {
@@ -56,8 +65,8 @@
   border: 2px solid var(--md-primary-fg-color);
 }
 
-.team-member p {
+.team-member .name {
   font-size: 0.85rem;
-  margin: 0;
   line-height: 1.2;
+  display: block;
 }

@@ -1,49 +1,12 @@
 # Equipe T02 RADIA PERLMAN
 
-<div class="team-grid" markdown>
-
-  <div class="team-member" markdown>
-    <a href="https://github.com/Juhvitoria4" target="_blank" rel="noopener">
-      <img src="https://github.com/Juhvitoria4.png" alt="Foto de Julia Vitória Freire Silva" width="100">
-      <p>Julia Vitória<br>Freire Silva</p>
-    </a>
-  </div>
-
-  <div class="team-member" markdown>
-    <a href="https://github.com/Luidooo" target="_blank" rel="noopener">
-      <img src="https://github.com/Luidooo.png" alt="Foto de Luis Eduardo Castro M Lima" width="100">
-      <p>Luis Eduardo<br>Castro M Lima</p>
-    </a>
-  </div>
-
-  <div class="team-member" markdown>
-    <a href="https://github.com/anajoyceamorim" target="_blank" rel="noopener">
-      <img src="https://github.com/anajoyceamorim.png" alt="Foto de Ana Joyce Guedes Amorim da Silva" width="100">
-      <p>Ana Joyce Guedes<br>Amorim da Silva</p>
-    </a>
-  </div>
-
-  <div class="team-member" markdown>
-    <a href="https://github.com/dcasseb" target="_blank" rel="noopener">
-      <img src="https://github.com/dcasseb.png" alt="Foto de Davi Araújo Bady Casseb" width="100">
-      <p>Davi Araújo<br>Bady Casseb</p>
-    </a>
-  </div>
-
-  <div class="team-member" markdown>
-    <a href="https://github.com/HladczukLe" target="_blank" rel="noopener">
-      <img src="https://github.com/HladczukLe.png" alt="Foto de Letícia de Cássia Hladczuk Rodrigues" width="100">
-      <p>Letícia de Cássia<br>Hladczuk Rodrigues</p>
-    </a>
-  </div>
-
-  <div class="team-member" markdown>
-    <a href="https://github.com/SamuelAfonso" target="_blank" rel="noopener">
-      <img src="https://github.com/SamuelAfonso.png" alt="Foto de Samuel Afonso da Silva Santos" width="100">
-      <p>Samuel Afonso<br>da Silva Santos</p>
-    </a>
-  </div>
-
+<div class="team-grid">
+<div class="team-member"><a href="https://github.com/Juhvitoria4" target="_blank" rel="noopener"><img src="https://github.com/Juhvitoria4.png" alt="Julia Vitória Freire Silva"><span class="name">Julia Vitória<br>Freire Silva</span></a></div>
+<div class="team-member"><a href="https://github.com/Luidooo" target="_blank" rel="noopener"><img src="https://github.com/Luidooo.png" alt="Luis Eduardo Castro M Lima"><span class="name">Luis Eduardo<br>Castro M Lima</span></a></div>
+<div class="team-member"><a href="https://github.com/anajoyceamorim" target="_blank" rel="noopener"><img src="https://github.com/anajoyceamorim.png" alt="Ana Joyce Guedes Amorim da Silva"><span class="name">Ana Joyce Guedes<br>Amorim da Silva</span></a></div>
+<div class="team-member"><a href="https://github.com/dcasseb" target="_blank" rel="noopener"><img src="https://github.com/dcasseb.png" alt="Davi Araújo Bady Casseb"><span class="name">Davi Araújo<br>Bady Casseb</span></a></div>
+<div class="team-member"><a href="https://github.com/HladczukLe" target="_blank" rel="noopener"><img src="https://github.com/HladczukLe.png" alt="Letícia de Cássia Hladczuk Rodrigues"><span class="name">Letícia de Cássia<br>Hladczuk Rodrigues</span></a></div>
+<div class="team-member"><a href="https://github.com/SamuelAfonso" target="_blank" rel="noopener"><img src="https://github.com/SamuelAfonso.png" alt="Samuel Afonso da Silva Santos"><span class="name">Samuel Afonso<br>da Silva Santos</span></a></div>
 </div>
 
 ## Tabela de contribuição - EU1
