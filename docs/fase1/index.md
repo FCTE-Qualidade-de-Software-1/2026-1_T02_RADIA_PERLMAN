@@ -1,7 +1,7 @@
-# Fase 1 (EU1) — Requisitos da Avaliação
+# Fase 1 (EU1) - Requisitos da Avaliação
 
 A Fase 1 do projeto, segundo o plano de ensino e a norma **ISO/IEC 25040**, tem por finalidade
-**estabelecer os requisitos da avaliação** — antes de qualquer medição. É o estágio em que se
+**estabelecer os requisitos da avaliação** - antes de qualquer medição. É o estágio em que se
 define *o que* será avaliado, *por que*, *para quem*, *com qual profundidade* e *de acordo com
 qual modelo de qualidade adaptado*. As fases seguintes (definição de métricas, medição,
 análise e relato) serão construídas sobre as decisões aqui registradas.

@@ -30,7 +30,7 @@ A avaliação atende a **três públicos primários**:
 3. **Equipe atual e ex‑desenvolvedores do AcheiUnB**, que podem usar os resultados para
    priorizar correções de curto prazo e *backlog* de qualidade.
 
-Stakeholders secundários (usuários finais — comunidade da UnB; potenciais operadores
+Stakeholders secundários (usuários finais - comunidade da UnB; potenciais operadores
 institucionais; órgãos da UnB que poderiam adotar o sistema) são considerados na
 **definição de critérios de sucesso** e na **interpretação dos resultados**, mas **não**
 participam diretamente das atividades de medição da Fase 2. Essa restrição é justificada
@@ -59,10 +59,10 @@ containerizado (Docker), conforme o modelo proposto pela própria equipe do Ache
 resultados são entregues nos relatórios EU1, EU2 e EU3, com versão consolidada publicada
 nesta GitPage e na *release* final do repositório.
 
-!!! info "Decisão registrada — versão sob avaliação"
+!!! info "Decisão registrada - versão sob avaliação"
     Define-se como **objeto da avaliação** o estado do repositório
     `unb-mds/2024-2-AcheiUnB` na *tag* ou *commit* a ser fixado no início da Fase 2.
-    Mudanças posteriores ao código original **não invalidam** os resultados — apenas
+    Mudanças posteriores ao código original **não invalidam** os resultados - apenas
     restringem sua validade ao instantâneo (*snapshot*) avaliado. Esse princípio é
     reforçado em [Escopo, profundidade e objetos](06-escopo.md).
 
@@ -73,8 +73,8 @@ A escolha do propósito tem três implicações imediatas sobre o restante da Fa
 - **Sobre a seleção de características** ([§5](05-caracteristicas.md)): a decisão D2 exige
   que a avaliação produza informação acionável sobre **componentes** internos (não apenas
   uma nota global). Isso favorece características em que a evidência é majoritariamente
-  obtida por análise estática e dinâmica do código — **Manutenibilidade**, **Segurança**,
-  **Confiabilidade** e **Adequação Funcional** — e desfavorece características que
+  obtida por análise estática e dinâmica do código - **Manutenibilidade**, **Segurança**,
+  **Confiabilidade** e **Adequação Funcional** - e desfavorece características que
   demandam pesquisa com usuários finais (cujo acesso é restrito no escopo acadêmico).
 - **Sobre o escopo** ([§6](06-escopo.md)): a decisão D1 só é viável se a profundidade da
   medição for compatível com o tempo da disciplina (1 semestre). O escopo se concentra

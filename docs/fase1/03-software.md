@@ -2,7 +2,7 @@
 
 Esta seção classifica o **tipo de produto** avaliado, descreve o AcheiUnB de forma
 estruturada (módulos, interfaces, dependências e restrições) e explicita o **impacto direto
-dessas características sobre a avaliação** — em particular, o que é factível medir agora e
+dessas características sobre a avaliação** - em particular, o que é factível medir agora e
 o que fica reservado para fases futuras.
 
 ## 3.1 Identificação do software
@@ -20,7 +20,7 @@ o que fica reservado para fases futuras.
 ## 3.2 Classificação do tipo de produto
 
 Aplicando os referenciais da ISO/IEC 25010 (classificações de produto) e da ISO/IEC 25051
-(produtos do tipo RUSP — *Ready to Use Software Product*), o AcheiUnB é classificado como:
+(produtos do tipo RUSP - *Ready to Use Software Product*), o AcheiUnB é classificado como:
 
 - **Aplicação web SPA (*Single Page Application*) de uso geral**, do tipo **plataforma
   web institucional sem fins lucrativos**;
@@ -119,7 +119,7 @@ O *backend* (`API/`) é organizado em *apps* Django por domínio:
 O *frontend* (`web/`) é uma SPA construída com **Vue 3 + Vite + Tailwind CSS**, consumindo
 a API via Axios e estabelecendo conexão WebSocket via `socket.io-client`. A autenticação
 inicia no cliente (MSAL) e o *backend* valida o *token* emitido pela Microsoft. **Não
-foram identificados testes automatizados de *frontend* no repositório** — fato relevante
+foram identificados testes automatizados de *frontend* no repositório** - fato relevante
 para a discussão de profundidade em [Escopo](06-escopo.md).
 
 ### 3.3.4 Serviços auxiliares

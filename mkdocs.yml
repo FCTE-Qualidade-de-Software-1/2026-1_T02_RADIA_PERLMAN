@@ -1,5 +1,5 @@
-site_name: "T02 RADIA PERLMAN — Avaliação da Qualidade do AcheiUnB"
-site_description: "Trabalho Final de Qualidade de Software 1 (FGA315) — Equipe T02 RADIA PERLMAN"
+site_name: "T02 RADIA PERLMAN - Avaliação da Qualidade do AcheiUnB"
+site_description: "Trabalho Final de Qualidade de Software 1 (FGA315) - Equipe T02 RADIA PERLMAN"
 site_author: "Equipe T02 RADIA PERLMAN"
 site_url: "https://fcte-qualidade-de-software-1.github.io/2026-1_T02_RADIA_PERLMAN/"
 repo_url: "https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN"
@@ -78,7 +78,7 @@ extra:
       link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN
 
 copyright: |
-  Equipe T02 RADIA PERLMAN — FGA315 Qualidade de Software 1 — 2026/1 — Última atualização: 2026-05-13
+  Equipe T02 RADIA PERLMAN - FGA315 Qualidade de Software 1 - 2026/1 - Última atualização: 2026-05-13
 
 nav:
   - Início: index.md

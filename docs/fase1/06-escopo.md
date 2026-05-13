@@ -58,7 +58,7 @@ Os **objetos** sobre os quais incidirá a medição na Fase 2 são:
 | Sistema operacional | Linux. |
 | Versões | A *tag* / *commit* do `unb-mds/2024-2-AcheiUnB` será fixada no início da Fase 2. |
 | Dados | Ambiente sintético (sem dados reais). |
-| Provedores externos | MSAL/Azure AD — uso somente em modo desenvolvimento, com aplicação de teste; Cloudinary — uso com conta sintética. |
+| Provedores externos | MSAL/Azure AD - uso somente em modo desenvolvimento, com aplicação de teste; Cloudinary - uso com conta sintética. |
 
 ## 6.3 Fora do escopo
 
@@ -100,13 +100,13 @@ flowchart LR
 *Figura 6.1: cobertura progressiva. Cada anel só é executado se o anterior **não bastou**
 para apoiar as decisões D1 e D2 (§1.3).*
 
-### Anel 1 — Reaproveitamento
+### Anel 1 - Reaproveitamento
 
 - Reexecução dos *workflows* de CI do AcheiUnB (Ruff, Black, Bandit, Safety, Coverage).
 - Mapeamento dos relatórios de CodeCov existentes.
 - Leitura sistemática da documentação técnica (`docs/`).
 
-### Anel 2 — Análise dirigida
+### Anel 2 - Análise dirigida
 
 - Análise estática direcionada: complexidade ciclomática, acoplamento entre *apps*,
   dependências circulares, anti-padrões em *settings*.
@@ -114,7 +114,7 @@ para apoiar as decisões D1 e D2 (§1.3).*
 - Mapeamento requisito↔teste para conjunto amostral de funcionalidades.
 - Revisão manual do *frontend* em pontos críticos (autenticação, *upload*, chat).
 
-### Anel 3 — Cenários controlados
+### Anel 3 - Cenários controlados
 
 - Execução em Docker com queda intencional de serviços (Redis, *channel layer*).
 - Reconexão de WebSocket; *retry* de tarefas Celery.

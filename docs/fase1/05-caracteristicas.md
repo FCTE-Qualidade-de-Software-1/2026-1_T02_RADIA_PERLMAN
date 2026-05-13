@@ -65,7 +65,7 @@ ponderada.
 
 ### Justificativa das notas
 
-#### Segurança — score 4,80
+#### Segurança - score 4,80
 
 - **C1 Impacto = 5**: afeta a comunidade UnB (dados pessoais e de localização de objetos
   perdidos), o operador institucional hipotético (responsabilidade jurídica) e a próxima
@@ -80,7 +80,7 @@ ponderada.
 - **C4 Aderência = 5**: D2 cita explicitamente decisões sobre autenticação MSAL+JWT e
   *secret management*.
 
-#### Manutenibilidade — score 4,40
+#### Manutenibilidade - score 4,40
 
 - **C1 Impacto = 5**: é a *essência* da decisão D1 (priorização do *backlog* da próxima
   equipe). Sem essa característica, a continuidade do produto não é viável.
@@ -90,7 +90,7 @@ ponderada.
   estática é a mais barata de todas.
 - **C4 Aderência = 5**: D1 e D2 dependem de juízo sobre manutenibilidade dos componentes.
 
-#### Adequação Funcional — score 3,90
+#### Adequação Funcional - score 3,90
 
 - **C1 Impacto = 4**: stakeholders sucessores precisam saber o que funciona; usuário final
   ainda hipotético reduz a urgência.
@@ -101,7 +101,7 @@ ponderada.
 - **C4 Aderência = 4**: a decisão D2 ("manter/refatorar/substituir") depende, em parte, de
   saber o que está funcionalmente correto.
 
-#### Confiabilidade — score 3,60
+#### Confiabilidade - score 3,60
 
 - **C1 Impacto = 4**: o módulo de chat em tempo real e o *matching* assíncrono são
   funcionalidades centrais; falhas afetariam usuários reais (quando houver).
@@ -156,7 +156,7 @@ A escolha do método e dos pesos tem implicações que merecem registro explíci
 |---|---|---|---|
 | Método | Matriz ponderada (impacto×risco + dois modificadores) | MoSCoW com pesos; AHP (*Analytic Hierarchy Process*) | MoSCoW é binário demais (Must/Should/Could/Won't) e perde gradação. AHP exige comparações par a par calibradas, custo desproporcional para 4 itens. A matriz ponderada é a menor estrutura suficiente para produzir um ranking auditável. |
 | Pesos (0,30/0,30/0,20/0,20) | Impacto e Risco com peso igual; modificadores com peso menor | Pesos iguais (0,25 cada); pesos com Risco dominante | Pesos iguais subestimam o impacto sobre stakeholders, que é o objetivo de uma avaliação acadêmica voltada a sucessores. Risco dominante distorceria em direção a "consertar bug" em vez de "diagnosticar produto". |
-| Escala 1–5 | Inteira de 1 a 5 | Escala 0–10; escala qualitativa | 1–5 é granular o suficiente para discriminar 4 itens, sem dar falsa precisão. |
+| Escala 1-5 | Inteira de 1 a 5 | Escala 0-10; escala qualitativa | 1-5 é granular o suficiente para discriminar 4 itens, sem dar falsa precisão. |
 
 ### Trade-offs do resultado
 

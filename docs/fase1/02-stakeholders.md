@@ -37,7 +37,7 @@ desta Fase 1.
 
 ```mermaid
 flowchart LR
-    subgraph Universidade["Universidade de Brasília — FCTE"]
+    subgraph Universidade["Universidade de Brasília - FCTE"]
         subgraph FGA315["Disciplina FGA315 (Qualidade de Software 1)"]
             R[Profa. Cristiane Ramos<br/>Requisitante]
             T02[Equipe T02 RADIA PERLMAN<br/>Avaliador / Executor]
@@ -76,10 +76,10 @@ entrevistados, considerados apenas na leitura dos resultados).*
 |---|---|---|
 | Profa. Cristiane Ramos | Entregas EU1, EU2, EU3 e revisão entre pares no Moodle. | Por entrega. |
 | Equipe T02 | Reuniões internas (atas no repositório), *issues* e *pull requests* no GitHub. | Semanal. |
-| Equipe AcheiUnB 2024-2 | **Consulta documental** ao repositório e à documentação publicada (sem entrevista nesta fase). | — |
+| Equipe AcheiUnB 2024-2 | **Consulta documental** ao repositório e à documentação publicada (sem entrevista nesta fase). | - |
 | Próximas equipes MDS | Recepção dos artefatos publicados (GitPage + *release*) após a Fase 4. | Pós-entrega. |
 | Coordenação MDS/FGA315 | Acesso público à GitPage. | Contínuo. |
-| Operador institucional / Comunidade UnB | **Não envolvidos diretamente** (interpretação dos resultados na Fase 4). | — |
+| Operador institucional / Comunidade UnB | **Não envolvidos diretamente** (interpretação dos resultados na Fase 4). | - |
 
 !!! info "Decisão registrada: ausência de entrevistas na Fase 1"
     A Fase 1 **não conduz entrevistas** com a equipe AcheiUnB nem com usuários finais.

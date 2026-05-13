@@ -1,10 +1,10 @@
-# Equipe T02 RADIA PERLMAN — Avaliação da Qualidade do AcheiUnB
+# Equipe T02 RADIA PERLMAN - Avaliação da Qualidade do AcheiUnB
 
-**Disciplina:** FGA315 — Qualidade de Software 1
+**Disciplina:** FGA315 - Qualidade de Software 1
 **Professora:** Cristiane Ramos
 **Semestre:** 2026/1
 **Software avaliado:** [AcheiUnB](https://github.com/unb-mds/2024-2-AcheiUnB)
-**Norma de referência:** ISO/IEC 25000 (SQuaRE) — em particular ISO/IEC 25010 (modelo de qualidade) e ISO/IEC 25040 (processo de avaliação).
+**Norma de referência:** ISO/IEC 25000 (SQuaRE) - em particular ISO/IEC 25010 (modelo de qualidade) e ISO/IEC 25040 (processo de avaliação).
 
 ## Sobre o projeto
 

@@ -3,7 +3,7 @@
 Esta seção articula o **vínculo do AcheiUnB e desta avaliação** com os **Objetivos de
 Desenvolvimento Sustentável (ODS)** da Agenda 2030 das Nações Unidas. A premissa do
 projeto exige que os ODS sejam relacionados **no nível de metas e indicadores
-relevantes** — não basta citar o objetivo. Para cada ODS, registra-se: a meta vinculada,
+relevantes** - não basta citar o objetivo. Para cada ODS, registra-se: a meta vinculada,
 o indicador da meta (na nomenclatura oficial), o vínculo com o AcheiUnB e a
 **pertinência específica à avaliação de qualidade**.
 
@@ -25,7 +25,7 @@ indicadores oficiais.
 
 ## 7.2 Justificativa por ODS
 
-### 7.2.1 ODS 4 — Educação de Qualidade
+### 7.2.1 ODS 4 - Educação de Qualidade
 
 | Item | Conteúdo |
 |---|---|
@@ -34,7 +34,7 @@ indicadores oficiais.
 | **Vínculo com o AcheiUnB** | O AcheiUnB é mantido como **projeto educacional** pela disciplina MDS/UnB: por um lado, é um exercício didático no qual estudantes aprendem engenharia de software aplicada; por outro, serve a comunidade da própria universidade. A avaliação de qualidade do produto **realimenta o processo de ensino** ao caracterizar gaps técnicos e fornecer um *backlog* objetivo para as próximas equipes da disciplina. |
 | **Pertinência à avaliação** | A **Manutenibilidade** (P2 em §5) é a característica de qualidade diretamente conectada a esse ODS: um produto manutenível **viabiliza** a sucessão pedagógica entre semestres, sustentando o aprendizado. |
 
-### 7.2.2 ODS 9 — Indústria, Inovação e Infraestrutura
+### 7.2.2 ODS 9 - Indústria, Inovação e Infraestrutura
 
 | Item | Conteúdo |
 |---|---|
@@ -43,7 +43,7 @@ indicadores oficiais.
 | **Vínculo com o AcheiUnB** | O AcheiUnB é **infraestrutura digital institucional** de pequena escala. Mesmo limitado ao contexto UnB, exemplifica como tecnologia da informação produzida na universidade pode prover serviços públicos a uma comunidade. A continuidade técnica do produto depende de qualidade adequada de sua infraestrutura de software. |
 | **Pertinência à avaliação** | A **Confiabilidade** (P4 em §5) e a **Segurança** (P1) são as características diretamente conectadas: infraestrutura de TIC só atinge o objetivo do ODS 9 se for **confiável** e **segura**. A avaliação produz evidência sobre ambos. |
 
-### 7.2.3 ODS 11 — Cidades e Comunidades Sustentáveis
+### 7.2.3 ODS 11 - Cidades e Comunidades Sustentáveis
 
 | Item | Conteúdo |
 |---|---|
@@ -52,7 +52,7 @@ indicadores oficiais.
 | **Vínculo com o AcheiUnB** | Os *campi* da UnB são **espaços públicos** de circulação intensiva. Um sistema de achados e perdidos eficiente reduz fricções cotidianas para a comunidade universitária, contribui para a sensação de **segurança e cuidado coletivo** com objetos pessoais e amplia o **uso confortável** desses espaços por todos os perfis de frequentadores. |
 | **Pertinência à avaliação** | A **Adequação Funcional** (P3) e a **Segurança** (P1) são as características diretamente conectadas: a função "achar o objeto" precisa funcionar (Adequação) e os dados de localização precisam ser tratados com confidencialidade (Segurança). |
 
-### 7.2.4 ODS 12 — Consumo e Produção Responsáveis
+### 7.2.4 ODS 12 - Consumo e Produção Responsáveis
 
 | Item | Conteúdo |
 |---|---|
@@ -106,7 +106,7 @@ O vínculo registrado nesta seção tem **duas consequências práticas** para o
 final:
 
 1. **Cada achado da Fase 3** será associado, quando aplicável, ao **ODS, meta e
-   característica** correspondente — fechando a cadeia "evidência técnica → característica
+   característica** correspondente - fechando a cadeia "evidência técnica → característica
    de qualidade → impacto social".
 2. A **Fase 4** discutirá explicitamente, no relatório final, o **gap entre o impacto
    declarado e o impacto efetivamente entregável** dado o estado atual do AcheiUnB. Isso
