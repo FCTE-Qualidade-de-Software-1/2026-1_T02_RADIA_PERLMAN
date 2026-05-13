@@ -112,3 +112,18 @@ final:
    declarado e o impacto efetivamente entregável** dado o estado atual do AcheiUnB. Isso
    evita o vício comum de relatórios institucionais que citam ODS de forma decorativa,
    sem mostrar a mediação técnica.
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                           | Revisor(es)                              |
+|--------|------------|--------------------------|-------------------------------------|------------------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Davi Casseb, Ana Joyce, Luis Lima   | Letícia Hladczuk, Julia Vitória, Samuel Afonso |
+
+## Referências
+
+1. ORGANIZAÇÃO DAS NAÇÕES UNIDAS. *Transformando Nosso Mundo: A Agenda 2030 para o Desenvolvimento Sustentável*. Resolução A/RES/70/1, 25 set. 2015.
+2. ORGANIZAÇÃO DAS NAÇÕES UNIDAS. *Objetivo 4: Educação de Qualidade*. Disponível em: <https://brasil.un.org/pt-br/sdgs/4>. Acesso em: 13 maio 2026.
+3. ORGANIZAÇÃO DAS NAÇÕES UNIDAS. *Objetivo 9: Indústria, Inovação e Infraestrutura*. Disponível em: <https://brasil.un.org/pt-br/sdgs/9>. Acesso em: 13 maio 2026.
+4. ORGANIZAÇÃO DAS NAÇÕES UNIDAS. *Objetivo 11: Cidades e Comunidades Sustentáveis*. Disponível em: <https://brasil.un.org/pt-br/sdgs/11>. Acesso em: 13 maio 2026.
+5. ORGANIZAÇÃO DAS NAÇÕES UNIDAS. *Objetivo 12: Consumo e Produção Responsáveis*. Disponível em: <https://brasil.un.org/pt-br/sdgs/12>. Acesso em: 13 maio 2026.
+6. INSTITUTO DE PESQUISA ECONÔMICA APLICADA (IPEA). *Metas Nacionais dos Objetivos de Desenvolvimento Sustentável*. Brasília: Ipea, 2018.
