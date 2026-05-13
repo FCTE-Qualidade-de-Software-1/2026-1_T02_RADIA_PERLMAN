@@ -1,0 +1,98 @@
+site_name: "T02 RADIA PERLMAN — Avaliação da Qualidade do AcheiUnB"
+site_description: "Trabalho Final de Qualidade de Software 1 (FGA315) — Equipe T02 RADIA PERLMAN"
+site_author: "Equipe T02 RADIA PERLMAN"
+site_url: "https://fcte-qualidade-de-software-1.github.io/2026-1_T02_RADIA_PERLMAN/"
+repo_url: "https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN"
+repo_name: "FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN"
+edit_uri: "edit/main/docs/"
+
+theme:
+  name: material
+  language: pt
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Alternar para modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Alternar para modo claro
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 4
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: pt
+  - tags
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN
+
+copyright: |
+  Equipe T02 RADIA PERLMAN — FGA315 Qualidade de Software 1 — 2026/1 — Última atualização: 2026-05-13
+
+nav:
+  - Início: index.md
+  - Fase 1 (EU1):
+    - Visão geral: fase1/index.md
+    - 1. Propósito da avaliação: fase1/01-proposito.md
+    - 2. Requisitante e partes interessadas: fase1/02-stakeholders.md
+    - 3. Tipo de produto e descrição do software: fase1/03-software.md
+    - 4. Modelo de qualidade adaptado: fase1/04-modelo-qualidade.md
+    - 5. Seleção e priorização de características: fase1/05-caracteristicas.md
+    - 6. Escopo, profundidade e objetos: fase1/06-escopo.md
+    - 7. ODS, metas e indicadores: fase1/07-ods.md
+  - Equipe e contribuições: equipe.md
+  - Declaração de uso de IA: declaracao-ia.md
+  - Rastreabilidade: rastreabilidade.md
