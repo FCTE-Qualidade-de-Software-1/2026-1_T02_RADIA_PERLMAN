@@ -179,3 +179,17 @@ pelas seções subsequentes:
 | **Não dá para medir agora**: disponibilidade real, desempenho sob carga representativa de produção, satisfação de usuários reais, taxa de defeitos em operação. | §6 (corte de escopo) |
 | **Dá para medir parcialmente**: cobertura e qualidade do *frontend* (sem suíte de testes automatizada; haverá inspeção manual amostral). | §6 |
 | **Reaproveita-se**: artefatos de CI/CD já existentes no AcheiUnB (Bandit, Safety, Ruff, Black, Coverage, CodeCov) servirão como **fonte primária** de evidência para algumas subcaracterísticas. | §5, §6 |
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                                  | Revisor(es)                          |
+|--------|------------|--------------------------|--------------------------------------------|--------------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Davi Casseb, Letícia Hladczuk, Samuel Afonso | Ana Joyce, Julia Vitória, Luis Lima |
+
+## Referências
+
+1. ISO/IEC 25010:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): System and software quality models*. International Organization for Standardization, 2011.
+2. ISO/IEC 25051:2014. *Software engineering: Software product Quality Requirements and Evaluation (SQuaRE): Requirements for quality of Ready to Use Software Product (RUSP) and instructions for testing*. International Organization for Standardization, 2014.
+3. AcheiUnB. *Repositório do projeto da disciplina MDS/UnB 2024-2*. Disponível em: <https://github.com/unb-mds/2024-2-AcheiUnB>. Acesso em: 13 maio 2026.
+4. Django Software Foundation. *Django Documentation*. Disponível em: <https://docs.djangoproject.com/>. Acesso em: 13 maio 2026.
+5. Vue.js Team. *Vue.js Documentation*. Disponível em: <https://vuejs.org/guide/>. Acesso em: 13 maio 2026.
