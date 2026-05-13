@@ -45,7 +45,7 @@ mkdocs build
 # Em seguida, exportar usando o navegador ou Pandoc a partir dos .md
 ```
 
-Para o PDF entregue no Moodle, ver `docs/relatorio-eu1.pdf` (gerado a partir dos arquivos `fase1/*.md`).
+Para o PDF entregue no Aprender 3, ver `docs/relatorio-eu1.pdf` (gerado a partir dos arquivos `fase1/*.md`).
 
 ## Equipe T02 RADIA PERLMAN
 
@@ -58,5 +58,4 @@ Para o PDF entregue no Moodle, ver `docs/relatorio-eu1.pdf` (gerado a partir dos
 | 221039209  | Letícia de Cássia Hladczuk Rodrigues  |
 | 211062473  | Samuel Afonso da Silva Santos         |
 
-A tabela de contribuição detalhada (com atividades e percentuais) é apresentada no relatório
-técnico submetido ao Moodle.
+A tabela de contribuição da EU1 está em [`docs/equipe.md`](docs/equipe.md).
