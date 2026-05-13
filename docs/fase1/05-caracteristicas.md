@@ -184,3 +184,15 @@ stakeholders mapeados em [§2](02-stakeholders.md):
 
 A próxima seção ([§6](06-escopo.md)) traduz essa priorização em **escopo, profundidade e
 objetos de avaliação**.
+
+## Histórico de versão
+
+| Versão | Data       | Descrição                | Autor(es)                              | Revisor(es)                          |
+|--------|------------|--------------------------|----------------------------------------|--------------------------------------|
+| 1.0    | 2026-05-13 | Versão inicial da seção. | Davi Casseb, Julia Vitória, Samuel Afonso | Ana Joyce, Letícia Hladczuk, Luis Lima |
+
+## Referências
+
+1. ISO/IEC 25010:2011. *Systems and software engineering: Systems and software Quality Requirements and Evaluation (SQuaRE): System and software quality models*. International Organization for Standardization, 2011.
+2. SAATY, Thomas L. *The Analytic Hierarchy Process: Planning, Priority Setting, Resource Allocation*. New York: McGraw-Hill, 1980.
+3. CLEGG, Dai; BARKER, Richard. *Case Method Fast-Track: A RAD Approach*. Addison-Wesley, 1994. (Origem do método MoSCoW.)
