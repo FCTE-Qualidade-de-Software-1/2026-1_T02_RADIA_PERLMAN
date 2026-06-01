@@ -9,14 +9,13 @@ ao final.
 
 ## 5.1 Características selecionadas
 
-As quatro características mantidas no modelo adaptado são as **selecionadas para avaliação**:
+As três características mantidas no modelo adaptado são as **selecionadas para avaliação**:
 
 1. **Segurança**
 2. **Manutenibilidade**
-3. **Adequação Funcional**
-4. **Confiabilidade**
+3. **Confiabilidade**
 
-A justificativa de **por que essas quatro e não outras** está em [§4.2](04-modelo-qualidade.md#42-adaptacao-ao-acheiunb).
+A justificativa de **por que essas três e não outras** está em [§4.2](04-modelo-qualidade.md#42-adaptacao-ao-acheiunb).
 Esta seção concentra-se em **como priorizá-las entre si**, dado que a equipe T02 tem
 recurso (tempo, pessoas) finito para a Fase 2.
 
@@ -60,8 +59,7 @@ ponderada.
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
 | **Segurança** | 5 | 5 | 4 | 5 | **4,80** | **P1** |
 | **Manutenibilidade** | 5 | 3 | 5 | 5 | **4,40** | **P2** |
-| **Adequação Funcional** | 4 | 3 | 5 | 4 | **3,90** | **P3** |
-| **Confiabilidade** | 4 | 4 | 3 | 3 | **3,60** | **P4** |
+| **Confiabilidade** | 4 | 4 | 3 | 3 | **3,60** | **P3** |
 
 ### Justificativa das notas
 
@@ -90,17 +88,6 @@ ponderada.
   estática é a mais barata de todas.
 - **C4 Aderência = 5**: D1 e D2 dependem de juízo sobre manutenibilidade dos componentes.
 
-#### Adequação Funcional - score 3,90
-
-- **C1 Impacto = 4**: stakeholders sucessores precisam saber o que funciona; usuário final
-  ainda hipotético reduz a urgência.
-- **C2 Risco = 3**: existe suíte de testes no *backend*; *frontend* sem testes é o
-  principal vetor de risco.
-- **C3 Viabilidade = 5**: *test suite* preexistente reaproveitável; cenários funcionais
-  reproduzíveis via Docker.
-- **C4 Aderência = 4**: a decisão D2 ("manter/refatorar/substituir") depende, em parte, de
-  saber o que está funcionalmente correto.
-
 #### Confiabilidade - score 3,60
 
 - **C1 Impacto = 4**: o módulo de chat em tempo real e o *matching* assíncrono são
@@ -124,15 +111,13 @@ quadrantChart
     quadrant-4 "Avaliar mais"
     "Seguranca": [0.95, 0.95]
     "Manutenibilidade": [0.55, 0.95]
-    "Adequacao Funcional": [0.55, 0.75]
     "Confiabilidade": [0.75, 0.75]
 ```
 
-*Figura 5.1: quadrante de impacto × risco para as quatro características selecionadas. O
-quadrante superior-direito ("Priorizar") concentra Segurança; Manutenibilidade e
-Adequação Funcional aparecem no quadrante superior-esquerdo, com alto impacto e risco
-moderado; Confiabilidade aparece à direita, com risco moderado-alto, mas impacto menor
-no estado atual (sem produção).*
+*Figura 5.1: quadrante de impacto × risco para as três características selecionadas. O
+quadrante superior-direito ("Priorizar") concentra Segurança; Manutenibilidade aparece no
+quadrante superior-esquerdo, com alto impacto e risco moderado; Confiabilidade aparece à
+direita, com risco moderado-alto, mas impacto menor no estado atual (sem produção).*
 
 ## 5.5 Resultado da priorização
 
@@ -140,10 +125,9 @@ no estado atual (sem produção).*
 |---|---|---|---|
 | **P1** | Segurança | 4,80 | Maior alocação de esforço de medição. Análise estática + dinâmica de autenticação e *secrets*. |
 | **P2** | Manutenibilidade | 4,40 | Análise estática consolidada (Ruff, Black, Coverage, complexidade), inspeção arquitetural amostral. |
-| **P3** | Adequação Funcional | 3,90 | Reaproveitamento da *test suite* existente do *backend* + amostragem manual no *frontend*. |
-| **P4** | Confiabilidade | 3,60 | Cenários de laboratório (queda de Redis, reconexão WS, *retry* Celery); cobertura mais estreita. |
+| **P3** | Confiabilidade | 3,60 | Cenários de laboratório (queda de Redis, reconexão WS, *retry* Celery); cobertura mais estreita. |
 
-A priorização **não exclui** nenhuma das quatro: todas serão avaliadas. O que muda é a
+A priorização **não exclui** nenhuma das três: todas serão avaliadas. O que muda é a
 **profundidade** e o **esforço alocado** (formalizado em [§6](06-escopo.md)).
 
 ## 5.6 Trade-offs discutidos
@@ -162,8 +146,8 @@ A escolha do método e dos pesos tem implicações que merecem registro explíci
 
 | Trade-off | Consequência | Mitigação |
 |---|---|---|
-| Confiabilidade ficou em P4. | Cenários de falha do chat e da fila assíncrona terão menos profundidade. | A Fase 4 registrará explicitamente, no relatório final, que **Confiabilidade em ambiente operacional** fica como recomendação de reavaliação caso o AcheiUnB seja implantado. |
-| Adequação Funcional reaproveita testes do *backend* e amostra o *frontend*. | Risco de subestimar defeitos do *frontend*. | A ausência de testes no *frontend* será reportada como achado da Fase 4 (independentemente do score). |
+| Confiabilidade ficou em P3 (último posto). | Cenários de falha do chat e da fila assíncrona terão menos profundidade. | A Fase 4 registrará explicitamente, no relatório final, que **Confiabilidade em ambiente operacional** fica como recomendação de reavaliação caso o AcheiUnB seja implantado. |
+| Adequação Funcional foi excluída para concentrar a avaliação em três características. | Risco de não diagnosticar defeitos puramente funcionais (especialmente no *frontend* sem testes). | A correção funcional do *backend* permanece parcialmente coberta pela Testabilidade/cobertura em Manutenibilidade; a ausência de testes no *frontend* será reportada como achado da Fase 4, e a Adequação Funcional fica como recomendação de reabertura. |
 | Segurança tem alta exigência de instrumentação na Fase 2. | Risco de extrapolar o prazo. | A Fase 2 vai definir um conjunto **mínimo viável** de métricas em segurança antes de expandir. |
 | Manutenibilidade pesa muito em D1, mas as medidas tradicionais (Ruff, complexidade) podem refletir mais o estilo do que o problema. | Risco de relatório "raso" em manutenibilidade. | Combinar análise estática automática com **inspeção arquitetural amostral** (acoplamento entre *apps*, dependências circulares). |
 
@@ -174,11 +158,12 @@ stakeholders mapeados em [§2](02-stakeholders.md):
 
 - **Próximas equipes MDS (sucessoras)** → favorecidas por P1 e P2 (recebem o produto sem
   passivos de segurança e com indicadores claros de manutenibilidade).
-- **Equipe AcheiUnB 2024-2** → favorecida por P2 e P3 (o diagnóstico é sobre
-  *seu* código, com ferramentas que ela mesma já adotou no CI).
-- **Operador institucional hipotético** → favorecido por P1 e P4 (segurança e
+- **Equipe AcheiUnB 2024-2** → favorecida por P2 (o diagnóstico é sobre *seu* código,
+  com as ferramentas de manutenibilidade que ela mesma já adotou no CI).
+- **Operador institucional hipotético** → favorecido por P1 e P3 (segurança e
   confiabilidade são pré-requisitos operacionais).
-- **Comunidade UnB** → favorecida por P1 (dados pessoais) e P3 (funcionalidade efetiva).
+- **Comunidade UnB** → favorecida por P1 (dados pessoais) e P3 (confiabilidade do serviço
+  de achados e perdidos).
 - **Profa. Cristiane Ramos (requisitante)** → favorecida pela rastreabilidade do método e
   pelos *trade-offs* explícitos, que permitem auditoria objetiva da rubrica.
 

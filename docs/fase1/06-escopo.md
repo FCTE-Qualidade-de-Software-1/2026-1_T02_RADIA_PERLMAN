@@ -17,7 +17,7 @@ Quatro princípios orientam o recorte do escopo:
    instrumentos já existentes no AcheiUnB (Bandit, Safety, Ruff, Black, Coverage, CodeCov,
    *test suite*).
 3. **Profundidade proporcional à prioridade.** A profundidade é alocada na ordem do ranking
-   da §5 (P1 > P2 > P3 > P4).
+   da §5 (P1 > P2 > P3).
 4. **Cortes explícitos.** Todo elemento excluído é registrado com **racional** e com
    **condição de reabertura** em avaliações futuras.
 
@@ -25,7 +25,7 @@ Quatro princípios orientam o recorte do escopo:
 
 ### 6.2.1 Características avaliadas
 
-As **quatro características priorizadas em §5**, com a profundidade indicada na tabela 6.1.
+As **três características priorizadas em §5**, com a profundidade indicada na tabela 6.1.
 
 **Tabela 6.1: profundidade planejada por característica.**
 
@@ -33,8 +33,7 @@ As **quatro características priorizadas em §5**, com a profundidade indicada n
 |---|---|---|---|
 | **P1** | Segurança | **Alta** | Inspeção da configuração Django (`settings.py`, *middlewares*, backends de auth); análise de gestão de *secrets*; reexecução e análise dos relatórios Bandit/Safety; revisão do fluxo MSAL/JWT; checagem de exposição de *cookies* e CORS; revisão amostral de *endpoints* sensíveis. |
 | **P2** | Manutenibilidade | **Alta** | Reexecução de Ruff, Black, Coverage; cálculo de complexidade ciclomática e tamanho de funções; mapa de dependências entre *apps*; análise da estrutura de testes; verificação de documentação técnica do código. |
-| **P3** | Adequação Funcional | **Média** | Reaproveitamento da *test suite* do *backend*; mapeamento requisito↔teste para um conjunto amostral de funcionalidades; execução manual de cenários no *frontend* (sem suíte automática). |
-| **P4** | Confiabilidade | **Baixa-Média (laboratório)** | Cenários controlados em Docker: queda de Redis, desconexão de WebSocket, *retry* de tarefas Celery; análise de tratamento de exceções no código. |
+| **P3** | Confiabilidade | **Baixa-Média (laboratório)** | Cenários controlados em Docker: queda de Redis, desconexão de WebSocket, *retry* de tarefas Celery; análise de tratamento de exceções no código. |
 
 ### 6.2.2 Objetos de avaliação
 
@@ -76,7 +75,7 @@ de **insumo para futuras avaliações**.
 | **Portabilidade** | Mitigada por Docker; baixa prioridade no MVP (§4). | Adoção em ambientes não-containerizados. |
 | **Disponibilidade real (subcaracterística de Confiabilidade)** | Sem ambiente operacional (§4.3.2). | Implantação operacional. |
 | **Satisfação de usuários reais** | Sem operação pública; entrevistas com usuários finais fora do método (§2.4). | Operação aberta à comunidade UnB com instrumento de coleta de satisfação. |
-| **Auditoria de licenciamento jurídico** | Fora do escopo técnico; será reportado como achado caso a licença permaneça ausente. | Necessidade de adoção institucional. |
+| **Auditoria de licenciamento jurídico** | Fora do escopo técnico; o repositório já declara licença **MIT** (§3.1), restando apenas eventual análise de adequação institucional. | Necessidade de adoção institucional. |
 | **Teste de carga (*load testing*)** | Sem dados representativos; resultados não-acionáveis. | Implantação operacional + base de uso real. |
 | **Avaliação do código *frontend* em profundidade alta** | Ausência de testes automatizados (§3.3.3) reduz custo-benefício; será coberto por amostragem. | Existência de suíte de testes para o *frontend*. |
 
@@ -111,7 +110,6 @@ para apoiar as decisões D1 e D2 (§1.3).*
 - Análise estática direcionada: complexidade ciclomática, acoplamento entre *apps*,
   dependências circulares, anti-padrões em *settings*.
 - Inspeção arquitetural amostral.
-- Mapeamento requisito↔teste para conjunto amostral de funcionalidades.
 - Revisão manual do *frontend* em pontos críticos (autenticação, *upload*, chat).
 
 ### Anel 3 - Cenários controlados
@@ -127,7 +125,7 @@ A leitura de qualquer resultado desta avaliação deve respeitar os limites a se
 | Limite | Implicação prática |
 |---|---|
 | **Instantâneo único.** Toda métrica refere-se à *tag*/*commit* fixado no início da Fase 2. | Resultados envelhecem com o repositório; revisões posteriores demandam nova execução. |
-| **Análise majoritariamente estática.** A medição dinâmica fica restrita à Confiabilidade (laboratório) e à Adequação Funcional (suíte existente). | Defeitos *only-runtime* podem passar despercebidos. |
+| **Análise majoritariamente estática.** A medição dinâmica fica restrita à Confiabilidade (cenários de laboratório). | Defeitos *only-runtime* podem passar despercebidos. |
 | **Ambiente local.** Não há produção comparável. | Métricas operacionais (disponibilidade real, latência sob carga) **não** estão no escopo. |
 | **Sem entrevistas.** Stakeholders externos foram considerados em §2 sem coleta direta. | Critérios de sucesso de usuário/operador foram **inferidos** a partir do produto e da documentação, não confirmados. |
 | **Avaliadores não-desenvolvedores do AcheiUnB.** A equipe T02 não participou da construção do produto. | Vantagem: independência. Desvantagem: conhecimento tácito menor; mitigado por leitura sistemática da documentação. |

@@ -41,7 +41,7 @@ indicadores oficiais.
 | **Meta 9.c** | "Aumentar significativamente o acesso às tecnologias de informação e comunicação e se empenhar para oferecer acesso universal e a preços acessíveis à internet nos países menos desenvolvidos, até 2020." |
 | **Indicador 9.c.1** | Proporção da população coberta por uma rede móvel, por tecnologia. |
 | **Vínculo com o AcheiUnB** | O AcheiUnB é **infraestrutura digital institucional** de pequena escala. Mesmo limitado ao contexto UnB, exemplifica como tecnologia da informação produzida na universidade pode prover serviços públicos a uma comunidade. A continuidade técnica do produto depende de qualidade adequada de sua infraestrutura de software. |
-| **Pertinência à avaliação** | A **Confiabilidade** (P4 em §5) e a **Segurança** (P1) são as características diretamente conectadas: infraestrutura de TIC só atinge o objetivo do ODS 9 se for **confiável** e **segura**. A avaliação produz evidência sobre ambos. |
+| **Pertinência à avaliação** | A **Confiabilidade** (P3 em §5) e a **Segurança** (P1) são as características diretamente conectadas: infraestrutura de TIC só atinge o objetivo do ODS 9 se for **confiável** e **segura**. A avaliação produz evidência sobre ambos. |
 
 ### 7.2.3 ODS 11 - Cidades e Comunidades Sustentáveis
 
@@ -50,7 +50,7 @@ indicadores oficiais.
 | **Meta 11.7** | "Até 2030, proporcionar o acesso universal a espaços públicos seguros, inclusivos, acessíveis e verdes, particularmente para mulheres e crianças, pessoas idosas e pessoas com deficiência." |
 | **Indicador 11.7.1** | Proporção média da área construída das cidades que é espaço público aberto para uso de todos, por sexo, idade e pessoas com deficiência. |
 | **Vínculo com o AcheiUnB** | Os *campi* da UnB são **espaços públicos** de circulação intensiva. Um sistema de achados e perdidos eficiente reduz fricções cotidianas para a comunidade universitária, contribui para a sensação de **segurança e cuidado coletivo** com objetos pessoais e amplia o **uso confortável** desses espaços por todos os perfis de frequentadores. |
-| **Pertinência à avaliação** | A **Adequação Funcional** (P3) e a **Segurança** (P1) são as características diretamente conectadas: a função "achar o objeto" precisa funcionar (Adequação) e os dados de localização precisam ser tratados com confidencialidade (Segurança). |
+| **Pertinência à avaliação** | A **Segurança** (P1) e a **Confiabilidade** (P3) são as características diretamente conectadas: os dados de localização precisam ser tratados com confidencialidade (Segurança) e o mecanismo que devolve o objeto ao dono precisa operar de forma confiável (Confiabilidade). |
 
 ### 7.2.4 ODS 12 - Consumo e Produção Responsáveis
 
@@ -59,11 +59,11 @@ indicadores oficiais.
 | **Meta 12.5** | "Até 2030, reduzir substancialmente a geração de resíduos por meio da prevenção, redução, reciclagem e reuso." |
 | **Indicador 12.5.1** | Taxa nacional de reciclagem, em toneladas de material reciclado. |
 | **Vínculo com o AcheiUnB** | Um sistema funcional de achados e perdidos **prolonga o ciclo de vida** de objetos pessoais (eletrônicos, livros, vestuário) ao devolvê-los ao dono em vez de descartá-los ou substituí-los. Mesmo em escala universitária, a iniciativa é alinhada à lógica de **reúso** central à meta 12.5. |
-| **Pertinência à avaliação** | A **Adequação Funcional** (P3) é a característica diretamente conectada: se o sistema **não recupera efetivamente** os itens (taxa de *matching* baixa, chat falhando, busca pobre), o impacto declarado neste ODS evapora. A avaliação verifica a integridade do principal mecanismo (módulo de *matching* em `API/users/`). |
+| **Pertinência à avaliação** | A **Confiabilidade** (P3) é a característica diretamente conectada: se os mecanismos que devolvem os itens falham (*matching* assíncrono interrompido por queda da fila Celery/Redis, chat em tempo real caindo sem reconexão), o sistema **não recupera efetivamente** os itens e o impacto declarado neste ODS evapora. A avaliação verifica a integridade do principal mecanismo (módulo de *matching* em `API/users/`, executado de forma assíncrona). |
 
 ## 7.3 Síntese: ODS × características priorizadas
 
-A figura 7.1 conecta os quatro ODS às quatro características priorizadas em §5, deixando
+A figura 7.1 conecta os quatro ODS às três características priorizadas em §5, deixando
 explícita a **mediação** que a qualidade de produto exerce sobre o impacto social
 declarado pelo AcheiUnB.
 
@@ -79,21 +79,20 @@ flowchart LR
     subgraph CARS["Características Priorizadas (§5)"]
         SEG[Segurança P1]
         MAN[Manutenibilidade P2]
-        AF[Adequação Funcional P3]
-        CONF[Confiabilidade P4]
+        CONF[Confiabilidade P3]
     end
 
     ODS4 --> MAN
     ODS9 --> SEG
     ODS9 --> CONF
     ODS11 --> SEG
-    ODS11 --> AF
-    ODS12 --> AF
+    ODS11 --> CONF
+    ODS12 --> CONF
 
     classDef ods fill:#fffde7,stroke:#fbc02d;
     classDef car fill:#e8eaf6,stroke:#3949ab;
     class ODS4,ODS9,ODS11,ODS12 ods
-    class SEG,MAN,AF,CONF car
+    class SEG,MAN,CONF car
 ```
 
 *Figura 7.1: mediação da qualidade de produto sobre o impacto declarado nos ODS. As setas

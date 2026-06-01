@@ -45,19 +45,21 @@ e suas justificativas de priorização são aprofundadas em [§5](05-caracterist
 
 | Característica | Decisão | Justificativa central |
 |---|---|---|
-| **Adequação Funcional** | Mantida e priorizada. | O AcheiUnB declara funcionalidades centrais (cadastro de item, *matching*, chat, denúncias). A equipe AcheiUnB já produziu uma **suíte de testes do *backend***, que é fonte primária de evidência. Stakeholders sucessores (próximas equipes MDS) dependem dessa informação para herdar o produto. |
-| **Confiabilidade** | Mantida e priorizada. | Existem fluxos críticos sensíveis a falhas (WebSocket no chat, fila Celery, *matching* assíncrono). A queda de Redis ou do *channel layer* afeta funcionalidades centrais. A profundidade é restrita a **medição em laboratório**, dada a ausência de produção pública. |
 | **Segurança** | Mantida e priorizada. | Há autenticação institucional federada (MSAL/Azure AD), JWT em *cookie*, e indícios preliminares de *secret* versionado no `settings.py`. Stakeholders (operador institucional hipotético, comunidade UnB como usuária) sensibilizam o critério. |
 | **Manutenibilidade** | Mantida e priorizada. | O produto é **herdado entre equipes acadêmicas** - a continuidade do projeto depende diretamente desta característica. Há instrumentos preexistentes no AcheiUnB (Ruff, Black, Coverage, CodeCov) que serão usados como fonte. |
+| **Confiabilidade** | Mantida e priorizada. | Existem fluxos críticos sensíveis a falhas (WebSocket no chat, fila Celery, *matching* assíncrono). A queda de Redis ou do *channel layer* afeta funcionalidades centrais. A profundidade é restrita a **medição em laboratório**, dada a ausência de produção pública. |
+| **Adequação Funcional** | Excluída por **redução de escopo**. | A equipe T02 optou por concentrar a avaliação em **três** características (dentro do limite de 2 a 4 da premissa). A avaliação funcional depende de requisitos formais que o AcheiUnB não documenta de forma completa e seria rasa no *frontend* (sem testes automatizados, §3.3.3); parte da correção funcional do *backend* permanece indiretamente observável pela **Testabilidade/cobertura** em Manutenibilidade. |
 | **Usabilidade** | Excluída por **premissa do projeto**. | A própria especificação da disciplina FGA315 proíbe a escolha de Usabilidade. |
 | **Eficiência de Desempenho** | Excluída por **inviabilidade no escopo**. | Requer carga representativa de **produção**, que o AcheiUnB não tem. Medir em laboratório com carga sintética geraria valores **sem validade externa** para apoiar D1/D2 (ver §1.3). |
 | **Compatibilidade** | Excluída por **baixa relevância no contexto**. | O sistema **não convive** com outros sistemas locais (sem requisito de coexistência). As poucas interfaces externas (MSAL e Cloudinary) já são padrões consolidados; risco residual baixo. |
 | **Portabilidade** | Excluída por **mitigação prévia via contêineres**. | O AcheiUnB já é containerizado (Docker + Compose), o que mitiga grande parte do risco de portabilidade. Adaptabilidade entre ambientes não é prioridade no estágio MVP. |
 
-!!! decision "Decisão registrada: exclusão de Eficiência, Compatibilidade e Portabilidade"
-    Essas três características **não** são consideradas "irrelevantes em absoluto" -
-    apenas **fora do escopo desta avaliação**, no estado atual do produto. A Fase 4
-    sinaliza, no relatório final, que elas deveriam ser reabertas caso o AcheiUnB
+!!! decision "Decisão registrada: avaliação concentrada em três características"
+    A equipe avalia **Segurança**, **Manutenibilidade** e **Confiabilidade**. **Adequação
+    Funcional**, **Eficiência**, **Compatibilidade** e **Portabilidade** ficam **fora do
+    escopo desta avaliação** - não por serem "irrelevantes em absoluto", mas por
+    proporcionalidade ao tempo e aos insumos disponíveis no estado atual do produto. A
+    Fase 4 sinaliza, no relatório final, que elas deveriam ser reabertas caso o AcheiUnB
     venha a ser implantado em ambiente operacional real.
 
 ## 4.3 Detalhamento das características mantidas
@@ -71,15 +73,7 @@ níveis:
   amostragem.
 - **Não aplicável (✗)**: ausência de insumo no estado atual; será reportada como achado.
 
-### 4.3.1 Adequação Funcional
-
-| Subcaracterística | Aplicabilidade | Comentário |
-|---|---|---|
-| Completude funcional | ✓ | Avaliada por checagem de requisitos declarados na documentação contra funcionalidades efetivamente implementadas. |
-| Correção funcional | ✓ | Suíte de testes existente do *backend* + execução de cenários funcionais controlados. |
-| Adequação funcional | ~ | Limitada à perspectiva técnica; sem usuários finais para confirmar adequação ao caso de uso. |
-
-### 4.3.2 Confiabilidade
+### 4.3.1 Confiabilidade
 
 | Subcaracterística | Aplicabilidade | Comentário |
 |---|---|---|
@@ -88,7 +82,7 @@ níveis:
 | Tolerância a falhas | ~ | Avaliada em laboratório (ex.: comportamento sob queda de Redis ou do *channel layer*). |
 | Recuperabilidade | ~ | Avaliada em laboratório (ex.: reconexão de WebSocket, *retry* de tarefas Celery). |
 
-### 4.3.3 Segurança
+### 4.3.2 Segurança
 
 | Subcaracterística | Aplicabilidade | Comentário |
 |---|---|---|
@@ -98,7 +92,7 @@ níveis:
 | Autenticidade | ✓ | Avaliada via fluxo MSAL e validação de *tokens*. |
 | Responsabilização | ~ | Equivalente operacional do *audit log*; depende de configuração do Django. |
 
-### 4.3.4 Manutenibilidade
+### 4.3.3 Manutenibilidade
 
 | Subcaracterística | Aplicabilidade | Comentário |
 |---|---|---|
@@ -119,19 +113,15 @@ subcaracterísticas estão marcadas com seu grau de aplicabilidade.
 flowchart TB
     Q[Qualidade de Produto<br/>ISO/IEC 25010 - adaptada ao AcheiUnB]
 
-    Q --> AF[Adequação Funcional]
-    Q --> CONF[Confiabilidade]
     Q --> SEG[Segurança]
     Q --> MAN[Manutenibilidade]
+    Q --> CONF[Confiabilidade]
 
     Q -.->|premissa: excluída| USA[Usabilidade]
+    Q -.->|redução de escopo| AF[Adequação Funcional]
     Q -.->|inviável sem produção| EP[Eficiência]
     Q -.->|baixa relevância| COMP[Compatibilidade]
     Q -.->|mitigada por Docker| PORT[Portabilidade]
-
-    AF --> AF1[Completude ✓]
-    AF --> AF2[Correção ✓]
-    AF --> AF3[Adequação ~]
 
     CONF --> C1[Maturidade ✓]
     CONF --> C2[Disponibilidade ✗]
@@ -152,8 +142,8 @@ flowchart TB
 
     classDef priorizada fill:#e8eaf6,stroke:#3949ab,stroke-width:2px;
     classDef excluida fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 4 4,color:#9e9e9e;
-    class AF,CONF,SEG,MAN priorizada
-    class USA,EP,COMP,PORT excluida
+    class SEG,MAN,CONF priorizada
+    class AF,USA,EP,COMP,PORT excluida
 ```
 
 *Figura 4.2: Modelo de qualidade ISO/IEC 25010 adaptado ao AcheiUnB. Caixas sólidas =
@@ -165,7 +155,7 @@ restrições; ✗ não aplicável).*
 
 O modelo adaptado dirige as decisões das seções seguintes:
 
-- **§5 (Seleção e priorização)** opera apenas sobre as quatro características em traço
+- **§5 (Seleção e priorização)** opera apenas sobre as três características em traço
   forte. A priorização entre elas usa um **método explícito** (matriz impacto×risco) e
   considera o critério de sucesso de cada *stakeholder*.
 - **§6 (Escopo e profundidade)** declara, para cada subcaracterística marcada como `~` ou

@@ -73,8 +73,8 @@ A escolha do propósito tem três implicações imediatas sobre o restante da Fa
 - **Sobre a seleção de características** ([§5](05-caracteristicas.md)): a decisão D2 exige
   que a avaliação produza informação acionável sobre **componentes** internos (não apenas
   uma nota global). Isso favorece características em que a evidência é majoritariamente
-  obtida por análise estática e dinâmica do código - **Manutenibilidade**, **Segurança**,
-  **Confiabilidade** e **Adequação Funcional** - e desfavorece características que
+  obtida por análise estática e dinâmica do código - **Manutenibilidade**, **Segurança**
+  e **Confiabilidade** - e desfavorece características que
   demandam pesquisa com usuários finais (cujo acesso é restrito no escopo acadêmico).
 - **Sobre o escopo** ([§6](06-escopo.md)): a decisão D1 só é viável se a profundidade da
   medição for compatível com o tempo da disciplina (1 semestre). O escopo se concentra

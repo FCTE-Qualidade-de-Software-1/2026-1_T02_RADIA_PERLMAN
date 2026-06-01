@@ -14,7 +14,7 @@ o que fica reservado para fases futuras.
 | Origem | Disciplina **Métodos de Desenvolvimento de Software (MDS)**, FCTE/UnB, semestre 2024/2. |
 | Mantenedores históricos | Sete estudantes de graduação (Ana Elisa, Davi Camilo, Euller Júlio, Leonardo Ramiro, Pedro Everton, Pedro Henrique, Tiago Balieiro), conforme `README.md`. |
 | Estado | MVP em desenvolvimento, sem instância de produção pública identificada. |
-| Licença | Não declarada no repositório (será confirmado na Fase 2 e tratado como achado em Manutenibilidade caso permaneça ausente). |
+| Licença | **MIT**, declarada no arquivo `LICENSE` na raiz do repositório. |
 | Propósito do software | Plataforma de **achados e perdidos** para a comunidade da Universidade de Brasília. Centraliza o registro de itens encontrados/perdidos e mediadia a comunicação entre quem perdeu e quem achou. |
 
 ## 3.2 Classificação do tipo de produto
@@ -107,9 +107,9 @@ O *backend* (`API/`) é organizado em *apps* Django por domínio:
 
 | Módulo | Responsabilidade | Pontos relevantes para avaliação |
 |---|---|---|
-| `API/users/` | Cadastro, autenticação institucional (MSAL), gestão de sessão (JWT em *cookie* HttpOnly), perfis, *matching* automático de itens perdidos/achados. | Concentra fluxos críticos de **Segurança** (auth, sessão) e regras de negócio centrais para **Adequação Funcional** (matching). |
+| `API/users/` | Cadastro, autenticação institucional (MSAL), gestão de sessão (JWT em *cookie* HttpOnly), perfis, *matching* automático de itens perdidos/achados. | Concentra fluxos críticos de **Segurança** (auth, sessão); o *matching* automático (executado de forma assíncrona) também é relevante para **Confiabilidade**. |
 | `API/chat/` | Mensageria em tempo real entre usuários por meio de Django Channels (WebSocket). | Único módulo com comunicação assíncrona bidirecional; relevante para **Confiabilidade** (tolerância a falhas, recuperação de sessão WS). |
-| `API/reports/` | Cadastro e gestão de denúncias e relatos de itens. | Fluxo CRUD típico; relevante para **Adequação Funcional**. |
+| `API/reports/` | Cadastro e gestão de denúncias e relatos de itens. | Fluxo CRUD típico; relevante para **Segurança** (tratamento de dados de denúncias). |
 | `API/support/` | Suporte / *helpdesk* básico. | Baixa criticidade; usado para amostragem em **Manutenibilidade** (padrões de código). |
 | `API/websocket-server/` | Orquestração dos *consumers* WS e configuração do *channel layer*. | Relevante para **Confiabilidade** (tolerância a falhas no canal real-time). |
 | `API/AcheiUnB/` | Projeto Django (settings, *urls*, *wsgi*/*asgi*). | Concentra **configuração de segurança** (CORS, `SECRET_KEY`, *middlewares*, *backends* de autenticação). |
@@ -165,7 +165,7 @@ para a discussão de profundidade em [Escopo](06-escopo.md).
 - **Não há instância pública** do AcheiUnB acessível, portanto não se pode medir
   disponibilidade/desempenho em produção.
 - **Não há testes automatizados de *frontend*** identificáveis no repositório, o que
-  limita a avaliação de **Adequação Funcional** e **Confiabilidade** pelo lado da SPA.
+  limita a avaliação de **Confiabilidade** pelo lado da SPA.
 
 ## 3.7 Implicações diretas para a avaliação
 
@@ -175,7 +175,7 @@ pelas seções subsequentes:
 
 | Implicação | Onde é tratada |
 |---|---|
-| **Dá para medir agora**: maturidade do código (Manutenibilidade), conformidade funcional do *backend* (Adequação Funcional via *test suite* existente + execução controlada), segurança estática (Bandit, *secret scanning*, revisão de configuração) e confiabilidade em laboratório (recuperação de WebSocket, comportamento sob queda de Redis). | §5, §6 |
+| **Dá para medir agora**: maturidade do código (Manutenibilidade), segurança estática (Bandit, *secret scanning*, revisão de configuração) e confiabilidade em laboratório (recuperação de WebSocket, comportamento sob queda de Redis). | §5, §6 |
 | **Não dá para medir agora**: disponibilidade real, desempenho sob carga representativa de produção, satisfação de usuários reais, taxa de defeitos em operação. | §6 (corte de escopo) |
 | **Dá para medir parcialmente**: cobertura e qualidade do *frontend* (sem suíte de testes automatizada; haverá inspeção manual amostral). | §6 |
 | **Reaproveita-se**: artefatos de CI/CD já existentes no AcheiUnB (Bandit, Safety, Ruff, Black, Coverage, CodeCov) servirão como **fonte primária** de evidência para algumas subcaracterísticas. | §5, §6 |
