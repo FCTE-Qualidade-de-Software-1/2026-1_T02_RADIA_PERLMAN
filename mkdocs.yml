@@ -78,7 +78,7 @@ extra:
       link: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN
 
 copyright: |
-  T02 RADIA PERLMAN | EU1 | 2026/1
+  T02 RADIA PERLMAN | EU2 | 2026/1
 
 nav:
   - Início: index.md
@@ -91,6 +91,26 @@ nav:
     - 5. Seleção e priorização de características: fase1/05-caracteristicas.md
     - 6. Escopo, profundidade e objetos: fase1/06-escopo.md
     - 7. ODS, metas e indicadores: fase1/07-ods.md
+  - Fase 2 (EU2):
+    - Visão geral: fase2/index.md
+    - 1. Objetivos de Nível de Mediação: fase2/01-objetivos-mediacao.md
+    - 2. Questões: fase2/02-questoes.md
+    - 3. Hipóteses: fase2/03-hipoteses.md
+    - 4. Métricas: fase2/04-metricas.md
+    - 5. Níveis de Pontuação e Critérios de Julgamento: fase2/05-niveis-pontuacao.md
+    - 6. Hierarquia GQM: fase2/06-hierarquia-gqm.md
+  - Fase 3 (EU2):
+    - Visão geral: fase3/index.md
+    - 1. Método e Repetibilidade das Instruções: fase3/01-metodo-instrucoes.md
+    - 2. Recursos e Ambiente de Avaliação: fase3/02-recursos-ambiente.md
+    - 3. Cronograma da Avaliação: fase3/03-cronograma.md
+  - Fase 4 (EU2):
+    - Visão geral: fase4/index.md
+    - 1. Obtenção das Medidas: fase4/01-medidas.md
+    - 2. Dados Brutos: fase4/02-dados-brutos.md
+    - 3. Análise e Resposta GQM: fase4/03-analise-resposta-gqm.md
+    - 4. Coerência dos Resultados com o Propósito: fase4/04-coerencia-resultados.md
+    - 5. Julgamento, Conclusões e Sugestões de Melhoria: fase4/05-julgamento-conclusoes.md
   - Equipe e contribuições: equipe.md
   - Declaração de uso de IA: declaracao-ia.md
   - Rastreabilidade: rastreabilidade.md

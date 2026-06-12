@@ -1,0 +1,1 @@
+# Obtenção das Medidas

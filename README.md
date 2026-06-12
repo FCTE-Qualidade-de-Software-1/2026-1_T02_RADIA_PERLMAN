@@ -30,8 +30,16 @@ Este repositório consolida todos os artefatos da avaliação de qualidade do so
 
 ## Como rodar a documentação localmente
 
+Recomenda-se o uso de um ambiente virtual Python (venv) para evitar conflitos com pacotes do sistema:
+
 ```bash
+# 1. Crie o ambiente virtual
+python3 -m venv .venv
+# 2. Ative o ambiente virtual
+source .venv/bin/activate
+# 3. Instale as dependências
 pip install mkdocs-material
+# 4. Inicie o servidor local
 mkdocs serve
 ```
 
@@ -39,10 +47,14 @@ O site fica disponível em `http://127.0.0.1:8000`.
 
 ## Como gerar o PDF do relatório
 
+O projeto possui um script dedicado que pré-processa os diagramas Mermaid e gera o PDF final.
+
 ```bash
-# A partir da raiz do repositório
-mkdocs build
-# Em seguida, exportar usando o navegador ou Pandoc a partir dos .md
+# 1. Certifique-se de ter o mermaid-cli instalado no sistema:
+npm install -g @mermaid-js/mermaid-cli
+
+# 2. Com o ambiente virtual Python ativado, execute:
+python3 scripts/build_pdf.py
 ```
 
 Para o PDF entregue no Aprender 3, ver `docs/relatorio-eu1.pdf` (gerado a partir dos arquivos `fase1/*.md`).

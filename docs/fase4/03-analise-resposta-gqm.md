@@ -1,0 +1,1 @@
+# Análise e Resposta GQM
