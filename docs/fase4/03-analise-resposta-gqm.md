@@ -18,7 +18,7 @@ De acordo com os dados obtidos foi possivel retomar as questçoes levantadas na 
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Cronograma de execução da avaliação com marcos, distribuição de atividades e contingências. | Julia Vitória, Luis Lima | Ana Joyce, Samuel Afonso |
+| 1.0 | 2026-06-12 | Cronograma de execução da avaliação com marcos, distribuição de atividades e contingências. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
 
 ## Referências
 
