@@ -1,6 +1,20 @@
 # Dados Brutos
 
-Os dados brutos estão no diretório `docs/fase4/Dados_Brutos`.
+Os dados brutos coletados na execução da avaliação estão armazenados no diretório `docs/fase4/Dados_Brutos`. Para garantir a rastreabilidade e a transparência (critério F4-C2), a Tabela 2.1 abaixo cataloga todos os artefatos gerados, vinculando-os à métrica correspondente e à instrução de coleta que os originou.
+
+**Tabela 2.1: Catálogo de dados brutos coletados.**
+
+| Arquivo (Dado Bruto) | Métrica | Instrução | Ferramenta / Método |
+| :--- | :--- | :--- | :--- |
+| `M1.1.1_trufflehog_1206.json.aa` a `.ae` | M1.1.1 | I-01 | Trufflehog (relatório JSON dividido em partes devido ao tamanho) |
+| `M1.2.1_bandit_1206.html` | M1.2.1 | I-03 | Bandit (relatório HTML de varredura) |
+| `Screenshot 2026-06-12 at 20-47-18 Bandit Report.png` | M1.2.1 | I-03 | Bandit (captura de tela do sumário) |
+| `M2.1.1_ruff_1206.json` | M2.1.1 | I-07 | Ruff (relatório JSON do linter) |
+| `M2.2_radon_1206.html` | M2.2.1, M2.2.2 | I-09 | Radon (relatório consolidado em HTML) |
+| `M2.2_radon_1206.txt` | M2.2.1, M2.2.2 | I-09 | Radon (saída raw em texto do terminal) |
+| `M3.2.2_tasks_1206.txt` | M3.2.2 | I-14 | Inspeção de Celery Tasks (evidência textual) |
+
+> **Nota de versionamento:** Devido a restrições de tamanho no GitHub, alguns relatórios extensos em JSON foram particionados (ex: `.aa`, `.ab`). Eles devem ser concatenados localmente caso necessitem ser analisados integralmente.
 
 ## Histórico de versão
 
