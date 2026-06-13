@@ -6,6 +6,8 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 
 ### G1. Objetivo de Medição - Segurança (P1)
 
+**Tabela 3.1: Hipóteses de Segurança (G1)**
+
 | ID | Questão | Hipótese |
 | :--- | :--- | :--- |
 | **Q1.1** | A gestão de segredos está adequadamente protegida? | **H1.1:** Acredita-se que existem segredos, como a `SECRET_KEY` do Django, versionados diretamente no código-fonte (em `settings.py`), representando uma falha crítica de confidencialidade, conforme [suspeita inicial na Fase 1](../fase1/03-software.md#36-restricoes-e-premissas-tecnicas). |
@@ -13,6 +15,8 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 | **Q1.3** | O fluxo de autenticação e sessão é seguro? | **H1.3:** Espera-se que o fluxo de validação de token JWT no backend seja funcional, mas que a configuração dos *cookies* de sessão (atributos `Secure`, `HttpOnly`, `SameSite`) possa não ser a mais restritiva, abrindo vetores de ataque em potencial. |
 
 ### G2. Objetivo de Medição - Manutenibilidade (P2)
+
+**Tabela 3.2: Hipóteses de Manutenibilidade (G2)**
 
 | ID | Questão | Hipótese |
 | :--- | :--- | :--- |
@@ -22,13 +26,20 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 
 ### G3. Objetivo de Medição - Confiabilidade (P3)
 
+**Tabela 3.3: Hipóteses de Confiabilidade (G3)**
+
 | ID | Questão | Hipótese |
 | :--- | :--- | :--- |
 | **Q3.1** | O sistema é tolerante a falhas em serviços externos? | **H3.1:** Espera-se que uma falha no Redis cause a interrupção imediata de todas as funcionalidades que dependem dele (fila de tarefas Celery e *layer* de canais do WebSocket), sem um mecanismo de *fallback* ou degradação graciosa, impactando o chat e o *matching* de itens. |
 | **Q3.2** | O sistema é capaz de se recuperar de falhas de conexão ou de tarefas? | **H3.2:** A hipótese é que nem o cliente WebSocket (`socket.io-client`) nem o servidor (Django Channels) possuem uma lógica de *retry* ou reconexão automática configurada por padrão, exigindo que o usuário recarregue a página para restabelecer o chat. Para o Celery, espera-se que tarefas falhas não sejam automaticamente reenfileiradas, a menos que explicitamente programadas para isso. |
 
+## Referências
+
+1. BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. The Goal Question Metric Approach. *Encyclopedia of Software Engineering*, 1994.
+2. ISO/IEC 25010:2011. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
+
 ## Histórico de versão
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição das hipóteses para cada questão GQM. | Júlia | Luis |
+| 1.0 | 2026-06-12 | Definição das hipóteses para cada questão GQM. | Júlia | Luis, Letícia |
