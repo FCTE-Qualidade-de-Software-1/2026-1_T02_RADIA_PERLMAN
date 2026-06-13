@@ -48,4 +48,4 @@ e não de forma isolada:
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Versão inicial da visão geral da Fase 3. | Davi Casseb | Samuel Afonso |
+| 1.0 | 2026-06-12 | Versão inicial da visão geral da Fase 3. | Davi Casseb | Letícia Hladczuk |

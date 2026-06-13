@@ -126,7 +126,7 @@ Somente após o passo 6 concluído em ao menos duas estações o cronograma da
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Especificação de recursos, ambiente, massa de dados e procedimento de preparação. | Samuel Afonso, Ana Joyce | Davi Casseb, Letícia Hladczuk |
+| 1.0 | 2026-06-12 | Especificação de recursos, ambiente, massa de dados e procedimento de preparação. | Davi Casseb | Letícia Hladczuk |
 
 ## Referências
 

@@ -256,7 +256,7 @@ Roteiro de cenário (executar com gravação de tela ativa):
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição dos métodos de avaliação e das instruções de coleta por métrica. | Davi Casseb, Letícia Hladczuk | Julia Vitória, Luis Lima |
+| 1.0 | 2026-06-12 | Definição dos métodos de avaliação e das instruções de coleta por métrica. | Davi Casseb | Letícia Hladczuk |
 
 ## Referências
 
