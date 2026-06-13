@@ -6,8 +6,6 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 
 ### G1. Objetivo de Medição - Segurança (P1)
 
-**Tabela 3.1: Hipóteses de Segurança (G1)**
-
 | ID | Questão | Hipótese |
 | :--- | :--- | :--- |
 | **Q1.1** | A gestão de segredos está adequadamente protegida? | **H1.1:** Acredita-se que existem segredos, como a `SECRET_KEY` do Django, versionados diretamente no código-fonte (em `settings.py`), representando uma falha crítica de confidencialidade, conforme [suspeita inicial na Fase 1](../fase1/03-software.md#36-restricoes-e-premissas-tecnicas). |
@@ -16,8 +14,6 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 
 ### G2. Objetivo de Medição - Manutenibilidade (P2)
 
-**Tabela 3.2: Hipóteses de Manutenibilidade (G2)**
-
 | ID | Questão | Hipótese |
 | :--- | :--- | :--- |
 | **Q2.1** | O código segue padrões e é modular? | **H2.1:** A hipótese é que o código do *backend* demonstra alta conformidade com os formatadores (Black) e linters (Ruff) já presentes no CI, mas que a análise de acoplamento revelará dependências circulares ou acoplamento excessivo entre alguns *apps* Django. |
@@ -25,8 +21,6 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 | **Q2.3** | A cobertura de testes é suficiente? | **H2.3:** A hipótese é que a cobertura de testes do *backend* será intermediária (na faixa de 60-80%), com áreas críticas (autenticação, CRUDs principais) bem testadas, mas com falhas de cobertura em casos de borda. A ausência de testes no *frontend* será confirmada como um ponto cego total para a qualidade da SPA. |
 
 ### G3. Objetivo de Medição - Confiabilidade (P3)
-
-**Tabela 3.3: Hipóteses de Confiabilidade (G3)**
 
 | ID | Questão | Hipótese |
 | :--- | :--- | :--- |
@@ -37,4 +31,4 @@ Para cada **questão (Q)** definida, formulamos uma **hipótese (H)** correspond
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição das hipóteses para cada questão GQM. | Júlia | Luis, Letícia |
+| 1.0 | 2026-06-12 | Definição das hipóteses para cada questão GQM. | Júlia | Luis |

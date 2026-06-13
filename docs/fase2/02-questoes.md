@@ -10,8 +10,6 @@ Elas são formuladas para cobrir os **atributos de qualidade** em foco (ex: conf
 
 O objetivo G1 visa caracterizar o nível de exposição a vulnerabilidades. As questões a seguir decompõem este objetivo:
 
-**Tabela 2.1: Questões de Segurança (G1)**
-
 | ID | Questão (Nível Operacional) | Subcaracterística(s) ISO/IEC 25010 |
 | :--- | :--- | :--- |
 | **Q1.1** | A gestão de segredos da aplicação (ex: `SECRET_KEY`, senhas de banco de dados, chaves de API) está adequadamente protegida contra exposição acidental no código-fonte ou em logs? | Confidencialidade |
@@ -21,8 +19,6 @@ O objetivo G1 visa caracterizar o nível de exposição a vulnerabilidades. As q
 ### G2. Objetivo de Medição - Manutenibilidade (P2)
 
 O objetivo G2 foca em diagnosticar a complexidade, testabilidade e conformidade do código. As questões derivadas são:
-
-**Tabela 2.2: Questões de Manutenibilidade (G2)**
 
 | ID | Questão (Nível Operacional) | Subcaracterística(s) ISO/IEC 25010 |
 | :--- | :--- | :--- |
@@ -34,19 +30,13 @@ O objetivo G2 foca em diagnosticar a complexidade, testabilidade e conformidade 
 
 O objetivo G3 busca entender o comportamento do sistema sob falha em ambiente de laboratório. Suas questões são:
 
-**Tabela 2.3: Questões de Confiabilidade (G3)**
-
 | ID | Questão (Nível Operacional) | Subcaracterística(s) ISO/IEC 25010 |
 | :--- | :--- | :--- |
 | **Q3.1** | O sistema se comporta de maneira previsível e degrada graciosamente na ocorrência de falhas em serviços externos dos quais depende (ex: indisponibilidade do *broker* Redis)? | Tolerância a Falhas |
 | **Q3.2** | O componente de chat (WebSocket) é capaz de restabelecer a comunicação automaticamente após uma queda de conexão? As tarefas assíncronas (Celery) são automaticamente reexecutadas em caso de falha transitória? | Recuperabilidade |
 
-## Referências
-
-1. ISO/IEC 25010:2011. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
-
 ## Histórico de versão
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição das questões GQM para cada objetivo de medição. | Ana Joyce | Luis, Letícia |
+| 1.0 | 2026-06-12 | Definição das questões GQM para cada objetivo de medição. | Ana Joyce | Luis |

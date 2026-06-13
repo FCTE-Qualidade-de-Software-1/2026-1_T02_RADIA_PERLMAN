@@ -8,8 +8,6 @@ Os objetivos definidos aqui derivam diretamente das **três características pri
 
 O *template* utilizado para estruturar cada objetivo de medição segue o padrão proposto por Basili et al.:
 
-**Tabela 1.1: Template GQM para Objetivos**
-
 | Estrutura | Campo | Descrição |
 |---|---|---|
 | **Analisar** | `Objeto da análise` | O que está sendo medido. |
@@ -22,8 +20,6 @@ O *template* utilizado para estruturar cada objetivo de medição segue o padrã
 
 ### G1. Objetivo de Medição - Segurança (P1)
 
-**Tabela 1.2: Objetivo G1 - Segurança**
-
 | Campo | Descrição |
 |---|---|
 | **Analisar** | o software AcheiUnB (código-fonte, configuração e fluxo de autenticação). |
@@ -33,8 +29,6 @@ O *template* utilizado para estruturar cada objetivo de medição segue o padrã
 | **no contexto de** | uma avaliação de qualidade para apoiar a decisão de **manter/refatorar** os componentes de autenticação MSAL+JWT e gestão de segredos ([Decisão D2, Fase 1](../fase1/01-proposito.md#13-uso-pretendido-dos-resultados)). |
 
 ### G2. Objetivo de Medição - Manutenibilidade (P2)
-
-**Tabela 1.3: Objetivo G2 - Manutenibilidade**
 
 | Campo | Descrição |
 |---|---|
@@ -46,8 +40,6 @@ O *template* utilizado para estruturar cada objetivo de medição segue o padrã
 
 ### G3. Objetivo de Medição - Confiabilidade (P3)
 
-**Tabela 1.4: Objetivo G3 - Confiabilidade**
-
 | Campo | Descrição |
 |---|---|
 | **Analisar** | os componentes de comunicação assíncrona e tempo real (Celery/Redis, WebSockets) do AcheiUnB. |
@@ -56,13 +48,8 @@ O *template* utilizado para estruturar cada objetivo de medição segue o padrã
 | **do ponto de vista da** | **próxima equipe de desenvolvimento (sucessora)**. |
 | **no contexto de** | uma avaliação em **laboratório (Docker)** para apoiar a decisão de **manter/refatorar** o módulo de chat e a fila de tarefas ([Decisão D2, Fase 1](../fase1/01-proposito.md#13-uso-pretendido-dos-resultados)). |
 
-## Referências
-
-1. BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. The Goal Question Metric Approach. *Encyclopedia of Software Engineering*, 1994.
-2. ISO/IEC 25040:2011. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Evaluation process*.
-
 ## Histórico de versão
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição dos objetivos de medição GQM para as características priorizadas. | Ana Joyce | Júlia, Letícia |
+| 1.0 | 2026-06-12 | Definição dos objetivos de medição GQM para as características priorizadas. | Ana Joyce | Júlia |
