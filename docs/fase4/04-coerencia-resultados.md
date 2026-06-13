@@ -1,21 +1,89 @@
-# Coerência dos Resultados com o Propósito
+# 4. Coerência dos Resultados com o Propósito
 
-A análise conjunta dos resultados operacionais com a declaração de propósito da Fase 1 demonstra que a avaliação atingiu seu objetivo de fornecer dados concretos para o diagnóstico técnico do AcheiUnB, subsidiando decisões estratégicas e o gerenciamento da dívida técnica para as equipes de desenvolvimento.
+Esta seção confronta os resultados da [análise GQM](03-analise-resposta-gqm.md) com a
+**declaração de propósito** e as **decisões a apoiar** definidas na
+[Fase 1, §1.3](../fase1/01-proposito.md#13-uso-pretendido-dos-resultados). O objetivo é
+demonstrar que os achados desta avaliação alimentam diretamente as decisões para as quais
+ela foi planejada - **D1** (priorização do *backlog* de qualidade) e **D2**
+(manter / refatorar / substituir componentes específicos) - respeitando os limites da
+execução parcial desta entrega.
 
-**Apoio à Decisão Técnica sobre o Legado (Decisão D1):**
-O propósito central de auxiliar as futuras equipes a decidir entre manter ou reescrever o backend do projeto é diretamente respondido pelos excelentes resultados de Manutenibilidade. A ausência de violações de estilo apontadas pelo Ruff e a nota média máxima em complexidade ciclomática avaliada pelo Radon indicam um código legível e modular. Esses dados concretos reduzem a incerteza técnica e fornecem uma base sólida para justificar a manutenção e evolução da base de código atual, mitigando a necessidade de uma reescrita completa do sistema.
+!!! info "Leitura honesta da coerência nesta entrega"
+    Quatro das oito questões GQM têm resposta com dados suficientes (Q1.1, Q1.2, Q2.2 e
+    a parte do Celery em Q3.2); as demais permanecem indeterminadas por pendência de
+    coleta ([Fase 4, Tabela 4.1](index.md#estado-da-execucao)). Portanto, a avaliação
+    **já produz subsídio acionável** para D1 e D2 nas características de maior prioridade
+    (Segurança e Manutenibilidade), mas **ainda não é um diagnóstico completo** - o que
+    é coerente com a estratégia de cobertura progressiva da
+    [Fase 1, §6.4](../fase1/06-escopo.md#64-plano-de-cobertura-progressiva).
 
-**Diagnóstico de Segurança e Priorização de Correções (Decisão D2):**
-A avaliação atende ao objetivo de apontar vulnerabilidades para o time atual e futuro focar em melhorias de curto prazo. Embora a gestão de segredos via repositório esteja controlada, a identificação de alertas críticos nas configurações do framework Django (como o modo DEBUG ativado e a ausência de diretrizes seguras para cookies e SSL) mapeia exatamente os pontos de risco do sistema. Isso cumpre o propósito de entregar um diagnóstico claro e acionável, permitindo que a equipe priorize a segurança da aplicação antes de qualquer implantação em ambiente de produção.
+## 4.1 Apoio à priorização do *backlog* de qualidade (Decisão D1)
 
-**Identificação de Fragilidades Arquiteturais e Resiliência (Decisão D2):**
-Em consonância com o objetivo de evidenciar falhas arquiteturais, a análise de Confiabilidade revelou uma lacuna importante na comunicação assíncrona. A detecção da ausência de políticas de *retry* em todas as tarefas do Celery expõe um ponto onde o sistema não consegue se recuperar automaticamente de falhas transitórias. Esse achado fornece o insumo exato planejado no escopo da avaliação, orientando a equipe sobre onde o software precisa ser refatorado para garantir maior tolerância a falhas em integrações com serviços externos.
+A **D1** ([Fase 1, §1.3](../fase1/01-proposito.md#13-uso-pretendido-dos-resultados))
+consiste em **ranquear itens de melhoria por característica e por risco residual**, com
+corte por capacidade da equipe. Os resultados já permitem montar um *backlog* inicial
+priorizado:
+
+| Prioridade | Item de *backlog* | Origem (métrica / questão) | Risco residual |
+|---|---|---|---|
+| Alta | *Hardening* de configuração do Django para produção | M1.2.2 (Ruim, ~50%) / Q1.2 | Alto |
+| Alta | Política de `retry` nas 13 tarefas Celery | M3.2.2 (Regular, 0/13) / Q3.2 | Médio-Alto |
+| Média | Correção das 3 chamadas HTTP sem *timeout* (B113) | M1.2.1 (Regular) / Q1.2 | Médio |
+| Média | Refatoração dos 5 pontos de complexidade elevada em `users`/`reports` | M2.2.2 (Regular, 5 funções grau C) / Q2.2 | Médio |
+
+Esse ranqueamento é exatamente o artefato que a D1 demanda e está apto a receber o corte
+por *story points* da equipe sucessora. As pendências (cobertura de testes, cenários de
+falha) entrarão no *backlog* assim que as instruções correspondentes forem concluídas.
+
+## 4.2 Apoio à decisão manter / refatorar / substituir (Decisão D2)
+
+A **D2** decide, **por componente**, entre manter, refatorar ou substituir, comparando o
+estado medido aos critérios da Fase 2. Os componentes nomeados na D2 recebem, com os
+dados atuais, a seguinte orientação preliminar:
+
+| Componente (D2) | Evidência atual | Orientação preliminar |
+|---|---|---|
+| *Secret management* | M1.1.1 = 0 segredos versionados (Aceitável); porém `SECRET_KEY` fraca em M1.2.2 | **Refatorar** a geração da chave (via variável de ambiente), **sem substituir** o mecanismo. |
+| Autenticação MSAL+JWT | Q1.3 pendente (I-05, I-06) | **Decisão adiada** - depende dos ensaios dinâmicos. |
+| Fila Celery+Redis | M3.2.2 = 0/13 tarefas com *retry* (Regular); Q3.1 (queda do Redis) pendente | **Refatorar** para adicionar resiliência; substituição não se justifica pelos dados atuais. |
+| Camada de testes do *frontend* | Q2.3 pendente (I-11) | **Decisão adiada** - aguarda contagem de testes. |
+| Módulo de chat (WebSocket) | Q3.2 (reconexão) pendente (I-13) | **Decisão adiada**. |
+
+A estrutura geral do *backend* - boa complexidade média (M2.2.1, grau A) com pontos
+localizados de atenção - sustenta a orientação de que **o backend é viável e
+manutenível**, favorecendo **evolução incremental em vez de reescrita completa**. Vale
+registrar que essa conclusão de manutenibilidade apoia-se em M2.2; a evidência do Ruff
+(M2.1.1) está **invalidada** ([§3.1](03-analise-resposta-gqm.md#31-sintese-dos-resultados))
+e, portanto, **não** é usada como base para esta orientação.
+
+## 4.3 Coerência com os stakeholders e o cenário de aplicação
+
+Os resultados atendem aos públicos primários definidos na
+[Fase 1, §1.2](../fase1/01-proposito.md#12-para-quem-e-a-avaliacao):
+
+- **Próximas equipes MDS (sucessoras):** recebem um *backlog* priorizado (D1) e
+  orientações por componente (D2), reduzindo a incerteza técnica da sucessão.
+- **Equipe AcheiUnB 2024-2:** o diagnóstico usa o ferramental que ela própria já adotou
+  no CI (Bandit, Radon), aumentando a aceitação dos achados.
+- **Operador institucional hipotético:** os achados de configuração (M1.2.2) sinalizam
+  claramente que o produto **não está pronto para produção** sem *hardening* prévio.
+
+## 4.4 Limites da coerência nesta entrega
+
+A avaliação **cumpre parcialmente** seu propósito: entrega subsídio robusto para D1 e D2
+em Segurança e Manutenibilidade, mas as decisões sobre **autenticação dinâmica, cobertura
+de testes e tolerância a falhas em tempo de execução** dependem das sete instruções
+pendentes. Em coerência com o princípio de cortes declarados da
+[Fase 1, §6.3](../fase1/06-escopo.md#63-fora-do-escopo), essas decisões ficam
+**explicitamente adiadas**, e não silenciosamente assumidas - preservando a validade dos
+julgamentos já emitidos.
 
 ## Histórico de versão
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
 | 1.0 | 2026-06-12 | Verificação da coerência dos resultados com o propósito da avaliação (Fase 1). | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
+| 2.0 | 2026-06-12 | Correção da atribuição D1/D2 conforme a Fase 1; alinhamento com a análise GQM revisada; declaração explícita do escopo parcial. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
 
 ## Referências
 
