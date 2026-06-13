@@ -24,6 +24,21 @@ cada uma das sete seções do relatório).
 | 221039209  | Letícia de Cássia Hladczuk Rodrigues  | Redação das seções 2, 3 e 6; revisão das seções 1, 4, 5 e 7.                                                                | 16,67%            |
 | 211062473  | Samuel Afonso da Silva Santos         | Redação das seções 1, 3 e 5; revisão das seções 2, 4, 6 e 7.                                                                | 16,67%            |
 
+## Tabela de contribuição - EU2
+
+A distribuição abaixo reflete a divisão de trabalho adotada pela equipe para as Fases 2, 3
+e 4 da Entrega da Unidade 2 (EU2). A autoria e revisão podem ser verificadas nos blocos
+"Histórico de versão" ao final de cada seção das Fases 2, 3 e 4.
+
+| Matrícula  | Nome                                  | Atividade realizada na EU2                                                                                                  | % de Contribuição |
+|------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------------------|
+| 211031566  | Ana Joyce Guedes Amorim da Silva      | Redação da Fase 2: objetivos de medição, questões, hipóteses, métricas, níveis de pontuação e hierarquia GQM.               | 16,67%            |
+| 211031083  | Julia Vitória Freire Silva            | Redação da Fase 2: objetivos de medição, questões, hipóteses, métricas, níveis de pontuação e hierarquia GQM.               | 16,67%            |
+| 221008285  | Luis Eduardo Castro M Lima            | Redação da Fase 2: objetivos de medição, questões, hipóteses, métricas, níveis de pontuação e hierarquia GQM.               | 16,67%            |
+| 211031682  | Davi Araújo Bady Casseb               | Redação da Fase 3: definição do método e instruções de coleta, especificação de recursos e ambiente, cronograma da avaliação.| 16,67%            |
+| 211062473  | Samuel Afonso da Silva Santos         | Redação da Fase 4: obtenção das medidas, dados brutos, análise e resposta GQM, julgamento e conclusões.                     | 16,67%            |
+| 221039209  | Letícia de Cássia Hladczuk Rodrigues  | Revisão geral das Fases 2, 3 e 4; verificação de consistência entre fases e padronização do relatório.                      | 16,67%            |
+
 A rastreabilidade das contribuições pode ser auditada pelos *commits* na *branch* `main`
 do repositório, em particular pelo bloco de *trailers* `Co-authored-by` de cada *commit* de
-seção e pelo histórico de versão impresso ao final de cada arquivo `docs/fase1/0X-*.md`.
+seção e pelo histórico de versão impresso ao final de cada arquivo `docs/fase*/0X-*.md`.

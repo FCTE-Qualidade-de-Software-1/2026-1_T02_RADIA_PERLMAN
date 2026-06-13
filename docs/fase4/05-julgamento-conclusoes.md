@@ -23,7 +23,7 @@ O projeto AcheiUnB possui uma base de código legada altamente viável e manuten
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Cronograma de execução da avaliação com marcos, distribuição de atividades e contingências. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
+| 1.0 | 2026-06-12 | Julgamento final de qualidade, conclusões e sugestões de melhoria. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
 
 ## Referências
 

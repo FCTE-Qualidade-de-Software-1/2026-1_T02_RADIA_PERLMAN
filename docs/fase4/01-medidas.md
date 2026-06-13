@@ -66,7 +66,7 @@
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Cronograma de execução da avaliação com marcos, distribuição de atividades e contingências. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
+| 1.0 | 2026-06-12 | Execução das instruções de coleta e registro dos resultados das medições. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
 
 ## Referências
 

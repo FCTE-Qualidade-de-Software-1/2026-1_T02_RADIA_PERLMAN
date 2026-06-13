@@ -4,7 +4,7 @@ A [Fase 1](../fase1/index.md) deste projeto estabeleceu o **propósito** da aval
 
 A Fase 2, descrita nas seções a seguir, responde ao "**como**".
 
-Nesta fase, construímos o **plano de avaliação** detalhado, utilizando a abordagem GQM (*Goal-Question-Metric*). Este plano traduz os objetivos de alto nível em um conjunto de métricas concretas e acionáveis, garantindo que os dados a serem coletados na [Fase 3](../fase3/index.md) sejam diretamente relevantes para o propósito da avaliação.
+Nesta fase, construímos o **plano de avaliação** detalhado, utilizando a abordagem GQM (*Goal-Question-Metric*). Este plano traduz os objetivos de alto nível em um conjunto de métricas concretas e acionáveis, garantindo que os dados a serem coletados na [Fase 4](../fase4/index.md) sejam diretamente relevantes para o propósito da avaliação.
 
 ## Estrutura da Fase 2
 
@@ -22,4 +22,4 @@ A Fase 2 está organizada da seguinte forma:
 
 6.  **[Hierarquia GQM (Gráfico GQM)](06-hierarquia-gqm.md):** Apresenta um diagrama visual que consolida todo o plano de medição, mostrando a rastreabilidade de objetivos a métricas.
 
-Ao final desta fase, temos um plano de avaliação completo e auditável, pronto para ser executado na [Fase 3](../fase3/index.md).
+Ao final desta fase, temos um plano de avaliação completo e auditável, pronto para ser executado na [Fase 4](../fase4/index.md).

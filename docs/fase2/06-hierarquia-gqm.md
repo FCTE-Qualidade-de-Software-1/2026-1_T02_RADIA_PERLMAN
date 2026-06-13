@@ -89,4 +89,4 @@ graph TD
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Criação do diagrama da hierarquia GQM. | Luis | Julia |
+| 1.0 | 2026-06-12 | Criação do diagrama da hierarquia GQM. | Luis | Julia, Letícia |
