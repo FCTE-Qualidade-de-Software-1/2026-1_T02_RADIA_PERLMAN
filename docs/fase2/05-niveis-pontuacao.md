@@ -10,6 +10,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M1.1.1:** Número de segredos (chaves de API, senhas, `SECRET_KEY`) encontrados no código-fonte.
 
+**Tabela 5.1: Níveis de Pontuação M1.1.1**
+
 | Nível (Valor Medido) | Critério de Julgamento |
 | :--- | :--- |
 | 0 | **Aceitável:** Nenhum segredo foi encontrado no código-fonte. A gestão de segredos segue a boa prática de separação de configuração e código. |
@@ -17,12 +19,16 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M1.1.2:** Existência de arquivo de variáveis de ambiente (`.env`) no `.gitignore`.
 
+**Tabela 5.2: Níveis de Pontuação M1.1.2**
+
 | Nível (Valor Medido) | Critério de Julgamento |
 | :--- | :--- |
 | Sim | **Aceitável:** O arquivo de variáveis de ambiente é corretamente ignorado pelo controle de versão, prevenindo o vazamento acidental de segredos. |
 | Não | **Inaceitável:** O arquivo não é ignorado, criando um risco de que segredos sejam versionados acidentalmente em commits futuros. |
 
 **M1.2.1:** Contagem de vulnerabilidades de segurança de criticidade Média ou Alta reportadas pela ferramenta `Bandit`.
+
+**Tabela 5.3: Níveis de Pontuação M1.2.1**
 
 | Nível (Contagem) | Critério de Julgamento |
 | :--- | :--- |
@@ -32,6 +38,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M1.2.2:** Checklist de conformidade das configurações de segurança do Django.
 
+**Tabela 5.4: Níveis de Pontuação M1.2.2**
+
 | Nível (% de Conformidade) | Critério de Julgamento |
 | :--- | :--- |
 | > 90% | **Bom:** As configurações de segurança do framework estão robustas e bem alinhadas com as melhores práticas recomendadas pela documentação. |
@@ -40,6 +48,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M1.3.1:** Checklist de atributos de segurança do *cookie* de sessão JWT.
 
+**Tabela 5.5: Níveis de Pontuação M1.3.1**
+
 | Nível (Atributos Faltantes) | Critério de Julgamento |
 | :--- | :--- |
 | 0 (`HttpOnly`, `Secure`, `SameSite` presentes) | **Bom:** O cookie de sessão está adequadamente protegido contra ataques de script (XSS) e de falsificação de solicitação entre sites (CSRF). |
@@ -47,6 +57,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 | > 1 | **Ruim:** A proteção do cookie é deficiente, tornando-o vulnerável a múltiplos vetores de ataque e comprometendo a segurança da sessão. |
 
 **M1.3.2:** Validade da assinatura do token JWT sob tentativa de manipulação.
+
+**Tabela 5.6: Níveis de Pontuação M1.3.2**
 
 | Nível (Valor Medido) | Critério de Julgamento |
 | :--- | :--- |
@@ -57,6 +69,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M2.1.1:** Contagem de violações reportadas pelo linter `Ruff`.
 
+**Tabela 5.7: Níveis de Pontuação M2.1.1**
+
 | Nível (Contagem) | Critério de Julgamento |
 | :--- | :--- |
 | 0 | **Bom:** O código está em total conformidade com os padrões de estilo e qualidade definidos no projeto. |
@@ -65,12 +79,16 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M2.1.2:** Número de dependências circulares entre *apps* Django.
 
+**Tabela 5.8: Níveis de Pontuação M2.1.2**
+
 | Nível (Contagem) | Critério de Julgamento |
 | :--- | :--- |
 | 0 | **Bom:** Os módulos do sistema estão bem desacoplados, o que facilita a modificação, o teste e o reuso de forma isolada. |
 | > 0 | **Ruim:** Existe acoplamento excessivo entre os módulos, uma condição que dificulta a manutenção, aumenta a complexidade e pode gerar efeitos colaterais inesperados durante o desenvolvimento. |
 
 **M2.2.1 & M2.2.2:** Complexidade Ciclomática (`radon`).
+
+**Tabela 5.9: Níveis de Pontuação M2.2.1 & M2.2.2**
 
 | Nível (Valor Medido) | Critério de Julgamento |
 | :--- | :--- |
@@ -80,6 +98,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M2.3.1:** Percentual de cobertura de linha (*line coverage*) da suíte de testes do *backend*.
 
+**Tabela 5.10: Níveis de Pontuação M2.3.1**
+
 | Nível (% de Cobertura) | Critério de Julgamento |
 | :--- | :--- |
 | > 80% | **Bom:** A suíte de testes automatizados fornece um alto grau de confiança para detectar regressões em futuras alterações. |
@@ -87,6 +107,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 | < 60% | **Ruim:** A baixa cobertura de testes representa um risco significativo de que alterações no código introduzam regressões não detectadas. |
 
 **M2.3.2:** Número de arquivos de teste no diretório do *frontend*.
+
+**Tabela 5.11: Níveis de Pontuação M2.3.2**
 
 | Nível (Contagem) | Critério de Julgamento |
 | :--- | :--- |
@@ -97,6 +119,8 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M3.1.1:** Comportamento observado do sistema após a parada do contêiner Redis.
 
+**Tabela 5.12: Níveis de Pontuação M3.1.1**
+
 | Nível (Ordinal) | Critério de Julgamento |
 | :--- | :--- |
 | 4. Degrada graciosamente | **Bom:** O sistema demonstra resiliência, tratando a falha de forma controlada e informando o usuário ou mantendo outras funcionalidades operantes. |
@@ -106,12 +130,16 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 **M3.2.1:** Capacidade de reconexão automática do cliente WebSocket.
 
+**Tabela 5.13: Níveis de Pontuação M3.2.1**
+
 | Nível (Valor Medido) | Critério de Julgamento |
 | :--- | :--- |
 | Sim | **Bom:** A aplicação oferece uma boa experiência de usuário ao recuperar a comunicação em tempo real de forma transparente após uma interrupção. |
 | Não | **Ruim:** A ausência de reconexão automática prejudica a usabilidade do chat, exigindo uma ação manual do usuário (ex: recarregar a página) para restabelecer a comunicação. |
 
 **M3.2.2:** Existência de política de `retry` para tarefas Celery.
+
+**Tabela 5.14: Níveis de Pontuação M3.2.2**
 
 | Nível (Valor Medido) | Critério de Julgamento |
 | :--- | :--- |
@@ -122,4 +150,4 @@ Os critérios são explícitos, detalhados e diretamente alinhados com as necess
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição dos níveis de pontuação e critérios de julgamento para cada métrica. | Luis | Ana Joyce |
+| 1.0 | 2026-06-12 | Definição dos níveis de pontuação e critérios de julgamento para cada métrica. | Luis | Ana Joyce, Letícia |

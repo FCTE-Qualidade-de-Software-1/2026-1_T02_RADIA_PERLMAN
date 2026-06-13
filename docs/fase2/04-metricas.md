@@ -10,6 +10,8 @@ Para cada métrica, são definidos seu tipo, o instrumento ou método de coleta 
 
 #### Q1.1: A gestão de segredos está adequadamente protegida?
 
+**Tabela 4.1: Métricas para Q1.1**
+
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
 | **M1.1.1** | Número de segredos (chaves de API, senhas, `SECRET_KEY`) encontrados no código-fonte. | Contagem | Análise estática com `trufflehog` e inspeção manual do `settings.py`. | Objetividade, Simplicidade |
@@ -17,12 +19,16 @@ Para cada métrica, são definidos seu tipo, o instrumento ou método de coleta 
 
 #### Q1.2: As configurações de segurança do framework estão alinhadas com as boas práticas?
 
+**Tabela 4.2: Métricas para Q1.2**
+
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
 | **M1.2.1** | Contagem de vulnerabilidades de segurança de criticidade Média ou Alta reportadas pela ferramenta `Bandit`. | Contagem | Execução do `Bandit` sobre o código-fonte do *backend*. | Objetividade, Validade |
 | **M1.2.2** | Checklist de conformidade das configurações de segurança do Django. | Percentual | Inspeção manual do `settings.py` contra uma lista de verificação baseada na documentação do Django. | Validade, Objetividade |
 
 #### Q1.3: O fluxo de autenticação e sessão é seguro?
+
+**Tabela 4.3: Métricas para Q1.3**
 
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
@@ -33,6 +39,8 @@ Para cada métrica, são definidos seu tipo, o instrumento ou método de coleta 
 
 #### Q2.1: O código segue padrões e é modular?
 
+**Tabela 4.4: Métricas para Q2.1**
+
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
 | **M2.1.1** | Contagem de violações reportadas pelo linter `Ruff`. | Contagem | Execução do `Ruff` sobre o código do *backend*. | Objetividade, Validade |
@@ -40,12 +48,16 @@ Para cada métrica, são definidos seu tipo, o instrumento ou método de coleta 
 
 #### Q2.2: Qual o nível de complexidade do código?
 
+**Tabela 4.5: Métricas para Q2.2**
+
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
 | **M2.2.1** | Complexidade ciclomática média por função/método. | Média | Análise estática com a ferramenta `radon`. | Objetividade, Validade |
 | **M2.2.2** | Contagem de funções/métodos com complexidade ciclomática "Alta" (>10). | Contagem | Análise estática com `radon`. | Simplicidade, Objetividade |
 
 #### Q2.3: A cobertura de testes é suficiente?
+
+**Tabela 4.6: Métricas para Q2.3**
 
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
@@ -56,11 +68,15 @@ Para cada métrica, são definidos seu tipo, o instrumento ou método de coleta 
 
 #### Q3.1: O sistema é tolerante a falhas em serviços externos?
 
+**Tabela 4.7: Métricas para Q3.1**
+
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
 | **M3.1.1** | Comportamento observado do sistema após a parada do contêiner Redis. | Ordinal | Execução de cenário de teste em laboratório (Docker) e observação da resposta da API. | Validade |
 
 #### Q3.2: O sistema é capaz de se recuperar de falhas de conexão ou de tarefas?
+
+**Tabela 4.8: Métricas para Q3.2**
 
 | ID | Métrica | Tipo | Instrumento / Método | Qualidade da Métrica |
 | :--- | :--- | :--- | :--- | :--- |
@@ -71,4 +87,4 @@ Para cada métrica, são definidos seu tipo, o instrumento ou método de coleta 
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
-| 1.0 | 2026-06-12 | Definição das métricas para cada questão GQM. | Julia | Ana Joyce |
+| 1.0 | 2026-06-12 | Definição das métricas para cada questão GQM. | Julia | Ana Joyce, Letícia |
