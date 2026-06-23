@@ -1,0 +1,33 @@
+=== I-06 (M1.3.2) Ensaio de Manipulação de Token JWT ===
+Data: 2026-06-23
+Executor: Luis Eduardo Castro M Lima
+Ambiente: Docker compose (api-web-1 rodando em localhost:8000)
+
+== TOKEN FORJADO ==
+Payload válido (user_id=1, exp=2030-01-01, token_type=access) assinado com
+chave INCORRETA (HS256, key='wrong-key-for-tampering'):
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE4OTM0NTYwM
+DAsImlhdCI6MTc2NzIyNTYwMCwianRpIjoidGVzdCIsInRva2VuX3R5cGUiOiJhY2Nlc3MifQ.
+KaEfRYNMKiK7Z5MZi_yT7tGFVatAevLudQnU85i0vSk
+
+== REQUISIÇÃO ENVIADA ==
+$ curl -H "Authorization: Bearer <token-forjado>" http://localhost:8000/api/auth/user/
+
+== RESPOSTA OBSERVADA ==
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json
+
+{"detail":"Given token not valid for any token type","code":"token_not_valid",
+ "messages":[{"token_class":"AccessToken","token_type":"access","message":"Token is invalid"}]}
+
+== CONTROLE: REQUISIÇÃO SEM TOKEN ==
+HTTP/1.1 401 Unauthorized
+{"detail":"As credenciais de autenticação não foram fornecidas."}
+
+== RESULTADO ==
+Valor da métrica: VÁLIDA - o sistema rejeitou o token manipulado com 401 e
+mensagem inequívoca de assinatura inválida. O fluxo de autenticação JWT
+(SimpleJWT com SIGNING_KEY=settings.SECRET_KEY, ALGORITHM=HS256, ver
+API/AcheiUnB/settings.py linhas 75-79) detecta a divergência de assinatura
+e rejeita o token sem expor informação sensível.

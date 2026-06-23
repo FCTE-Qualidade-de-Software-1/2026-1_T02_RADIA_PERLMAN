@@ -1,0 +1,59 @@
+=== I-12 (M3.1.1) Cenário de Queda do Redis ===
+Data: 2026-06-23
+Executor: Luis Eduardo Castro M Lima
+Ambiente: Docker compose (api-db-1, api-redis-1, api-web-1)
+
+== ESTADO INICIAL ==
+docker compose ps mostra os três contêineres rodando.
+
+== PERTURBAÇÃO ==
+$ docker compose stop redis
+Container api-redis-1 Stopped
+
+== OBSERVAÇÃO (3 minutos) ==
+Sondagem de endpoints REST que não dependem de Redis:
+  GET /api/items/         -> HTTP 200
+  GET /api/categories/    -> HTTP 200
+  GET /api/locations/     -> HTTP 200
+  GET /api/brands/        -> HTTP 200
+  GET /admin/login/       -> HTTP 200
+
+Sondagem de endpoints que usariam Redis:
+  POST /api/chat-rooms/   -> HTTP 404 (URL pattern incorreto; ver nota)
+
+Logs do contêiner web durante o teste: nenhuma exceção do Redis observada.
+Nenhuma 500 retornada nos endpoints REST testados.
+
+NOTA: o aplicativo expõe websockets para chat via Channels com layer no Redis;
+a sondagem direta via curl POST /api/chat-rooms/ retornou 404 por padrão de URL,
+mas como o canal de websocket (ws) exige autenticação MSAL real (que não foi
+configurada neste ensaio sintético), não foi possível observar empiricamente o
+comportamento do chat sem Redis. A inferência por inspeção de código é que o chat
+ficaria temporariamente indisponível (mensagens não trafegariam) sem derrubar a
+API REST.
+
+== RESTAURAÇÃO ==
+$ docker compose start redis
+Container api-redis-1 Started
+
+Pós-restauração:
+  GET /api/items/      -> HTTP 200
+  GET /api/categories/ -> HTTP 200
+  GET /api/brands/     -> HTTP 200
+  GET /admin/login/    -> HTTP 200
+
+Sistema retornou ao normal sem intervenção adicional. Sem crash do processo Django.
+
+== CLASSIFICAÇÃO ==
+Nível 4 (Bom) na rubrica da Fase 2 §5: "Degradação graciosa".
+Justificativa: a API REST continuou respondendo 200 OK em todos os endpoints
+testados que não dependem do Redis; o Django não emitiu exceções; o sistema
+voltou ao estado normal automaticamente após a restauração do contêiner.
+A funcionalidade de chat (que depende do Redis para o layer de Channels) fica
+temporariamente indisponível, mas isso não derruba o resto do sistema.
+
+LIMITE DESTE ENSAIO: o canal websocket (ws://) não foi sondado diretamente
+porque o login real via Microsoft MSAL exige credenciais reais da UnB que não
+estão neste ambiente sintético. A classificação se baseia no comportamento
+observado da API REST e na inspeção do código (chat depende de Redis somente
+para o transporte em tempo real, não para a integridade dos dados).

@@ -1,0 +1,34 @@
+=== I-05 (M1.3.1) Inspeção do Cookie de Sessão JWT ===
+Data: 2026-06-23
+Executor: Luis Eduardo Castro M Lima
+Método: MA3 ajustado para inspeção do código produtor do cookie
+        (login MSAL completo exigia credenciais reais da Microsoft AzureAD da UnB,
+        indisponíveis no ambiente sintético; ver "Limites" na Fase 4 / index).
+
+== TRECHO INSPECIONADO ==
+Arquivo: API/users/views.py
+Linhas: 517-525 (no callback do login Microsoft)
+
+response = HttpResponseRedirect("https://acheiunb.com.br/#/found")
+response.set_cookie(
+    key="access_token",
+    value=jwt_access,
+    httponly=True,
+    secure=True,
+    samesite="Strict",
+    max_age=3600,
+)
+
+== ATRIBUTOS PRESENTES ==
+HttpOnly:  presente (httponly=True)
+Secure:    presente (secure=True)
+SameSite:  presente (samesite="Strict")
+
+Valor da métrica: 0 atributos faltantes -> nível 4 (Bom) na rubrica da Fase 2 §5.
+
+== EVIDÊNCIA COMPLEMENTAR ==
+A configuração do cookie no código é a fonte da verdade: qualquer login real
+emitirá esses três atributos no Set-Cookie. A verificação dinâmica via Network
+do navegador exigiria credenciais MSAL reais da UnB, que não fazem parte deste
+ambiente. A inspeção direta do código (este arquivo) é equivalente para fins
+de auditoria e mais robusta contra variações temporárias.

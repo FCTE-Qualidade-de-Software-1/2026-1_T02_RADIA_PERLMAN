@@ -9,9 +9,18 @@ Os dados brutos coletados na execução da avaliação estão armazenados no dir
 | `M1.1.1_trufflehog_1206.json.aa` a `.ae` | M1.1.1 | I-01 | Trufflehog (relatório JSON dividido em partes devido ao tamanho) |
 | `M1.2.1_bandit_1206.html` | M1.2.1 | I-03 | Bandit (relatório HTML de varredura) |
 | `Screenshot 2026-06-12 at 20-47-18 Bandit Report.png` | M1.2.1 | I-03 | Bandit (captura de tela do sumário) |
-| `M2.1.1_ruff_1206.json` | M2.1.1 | I-07 | Ruff (relatório JSON do linter) |
+| `M1.3.1_cookie_attrs_2306.txt` | M1.3.1 | I-05 | Inspeção do produtor do cookie (`API/users/views.py`) |
+| `M1.3.2_jwt_tampered_2306.txt` | M1.3.2 | I-06 | Ensaio com token forjado (SimpleJWT) |
+| `M2.1.1_ruff_1206.json` | M2.1.1 | I-07 | Ruff (relatório JSON do linter, **coleta da EU2 inválida**: 0 byte) |
+| `M2.1.1_ruff_2306.json` | M2.1.1 | I-07 | Ruff (relatório JSON do linter, **recoleta da EU3**: 83 violações) |
+| `M2.1.2_imports_2306.txt` | M2.1.2 | I-08 | Listagem bruta de `imports` entre apps |
+| `M2.1.2_matriz_2306.txt` | M2.1.2 | I-08 | Matriz consolidada de dependências e ciclos |
 | `M2.2_radon_1206.html` | M2.2.1, M2.2.2 | I-09 | Radon (relatório consolidado em HTML) |
 | `M2.2_radon_1206.txt` | M2.2.1, M2.2.2 | I-09 | Radon (saída raw em texto do terminal) |
+| `M2.3.1_coverage_2306.txt` | M2.3.1 | I-10 | `coverage report` (saída textual) |
+| `M2.3.1_coverage_2306.xml` | M2.3.1 | I-10 | `coverage xml` (relatório estruturado) |
+| `M3.1.1_redis_kill_2306.txt` | M3.1.1 | I-12 | Roteiro de queda do Redis (logs + sondagens HTTP) |
+| `M3.2.1_websocket_reconnect_2306.txt` | M3.2.1 | I-13 | Inspeção do produtor da conexão `socket.io-client` |
 | `M3.2.2_tasks_1206.txt` | M3.2.2 | I-14 | Inspeção de Celery Tasks (evidência textual) |
 
 > **Nota de versionamento:** Devido a restrições de tamanho no GitHub, alguns relatórios extensos em JSON foram particionados (ex: `.aa`, `.ab`). Eles devem ser concatenados localmente caso necessitem ser analisados integralmente.
@@ -21,6 +30,7 @@ Os dados brutos coletados na execução da avaliação estão armazenados no dir
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
 | 1.0 | 2026-06-12 | Organização e catalogação dos dados brutos coletados. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
+| 2.0 | 2026-06-23 | Inclusão dos dados brutos das 7 instruções executadas na EU3 (I-05, I-06, I-08, I-10, I-11, I-12, I-13). | Luis Eduardo Castro M Lima, Ana Joyce Guedes | Julia Vitória |
 
 ## Referências
 

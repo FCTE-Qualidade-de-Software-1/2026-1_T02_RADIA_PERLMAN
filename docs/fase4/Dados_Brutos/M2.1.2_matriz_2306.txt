@@ -1,0 +1,13 @@
+
+Matriz de dependência (linha depende de coluna):
+     chat      users     reports   support 
+chat .         X         .         .         
+usersX         .         X         .         
+reportsX         X         .         .         
+support.         .         .         .         
+
+Ciclos (A->B e B->A):
+  CICLO: chat <-> users
+  CICLO: users <-> reports
+
+Total de ciclos: 2

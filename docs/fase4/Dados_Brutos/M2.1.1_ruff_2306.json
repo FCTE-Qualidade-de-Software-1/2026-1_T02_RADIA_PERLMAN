@@ -1,0 +1,1643 @@
+[
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 27,
+      "row": 6
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/AcheiUnB/settings.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 7
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        }
+      ],
+      "message": "Remove unused import: `cloudinary.uploader`"
+    },
+    "location": {
+      "column": 8,
+      "row": 6
+    },
+    "message": "`cloudinary.uploader` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 28,
+      "row": 11
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 11
+    },
+    "message": "Method `get_sender_username` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 11,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 35,
+      "row": 44
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 44
+    },
+    "message": "Method `get_participant_1_username` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 44,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 35,
+      "row": 51
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 51
+    },
+    "message": "Method `get_participant_2_username` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 51,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 25,
+      "row": 73
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 73
+    },
+    "message": "Method `validate_item_id` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 73,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 36,
+      "row": 59
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/tasks.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 59
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 59,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 38,
+      "row": 21
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/tests/test_serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 21
+    },
+    "message": "Method `test_validate_item_id_invalid` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 21,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 24,
+      "row": 25
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 25
+    },
+    "message": "Method `unread_messages` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 25,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 52,
+      "row": 93
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 93
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 93,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 56,
+      "row": 95
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 95
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 95,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 21,
+      "row": 124
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 124
+    },
+    "message": "Method `mark_as_read` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 124,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 49,
+      "row": 143
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 143
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 143,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 15,
+      "row": 227
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/chat/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 227
+    },
+    "message": "Method `delete` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 227,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 69,
+      "row": 8
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/manage.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 8
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 8,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 27,
+      "row": 78
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/reports/admin.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 78
+    },
+    "message": "Method `categories_display` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 78,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 23,
+      "row": 87
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/reports/admin.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 87
+    },
+    "message": "Method `attachment_tag` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 87,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 17,
+      "row": 12
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/reports/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 12
+    },
+    "message": "Method `validate` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 12,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 35,
+      "row": 18
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/reports/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 18
+    },
+    "message": "Method `_validate_duplicate_report` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 18,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 27,
+      "row": 51
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/reports/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 51
+    },
+    "message": "Method `_get_reported_user` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 51,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 59,
+      "row": 104
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/reports/views.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 104
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 104,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 13,
+      "row": 18
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/support/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 18
+    },
+    "message": "Method `post` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 18,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 16,
+      "row": 24
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/support/views.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 24
+    },
+    "message": "Try clause contains too many statements (6 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 24,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 24,
+      "row": 6
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/middleware.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 6
+    },
+    "message": "Method `process_request` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 6,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 41,
+      "row": 75
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/models.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 75
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 75,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 24,
+      "row": 84
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 84
+    },
+    "message": "Method `validate_images` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 84,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 26,
+      "row": 128
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 128
+    },
+    "message": "Method `get_category_name` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 128,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 26,
+      "row": 131
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 131
+    },
+    "message": "Method `get_location_name` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 131,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 23,
+      "row": 134
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 134
+    },
+    "message": "Method `get_color_name` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 134,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 23,
+      "row": 137
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 137
+    },
+    "message": "Method `get_brand_name` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 137,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 23,
+      "row": 140
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 140
+    },
+    "message": "Method `get_image_urls` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 140,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 22,
+      "row": 143
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/serializers.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 143
+    },
+    "message": "Method `get_image_ids` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 143,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 47,
+      "row": 58
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tasks.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 58
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 58,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 12,
+      "row": 88
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tasks.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 88
+    },
+    "message": "Try clause contains too many statements (7 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 88,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 8,
+      "row": 212
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tasks.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 212
+    },
+    "message": "Try clause contains too many statements (7 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 212,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 8,
+      "row": 231
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tasks.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 231
+    },
+    "message": "Try clause contains too many statements (10 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 231,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  },
+  {
+    "cell": null,
+    "code": "PLW1514",
+    "end_location": {
+      "column": 10,
+      "row": 13
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/templatetags/vite_tags.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": ", encoding=\"utf-8\"",
+          "end_location": {
+            "column": 29,
+            "row": 13
+          },
+          "location": {
+            "column": 29,
+            "row": 13
+          }
+        }
+      ],
+      "message": "Add explicit `encoding` argument"
+    },
+    "location": {
+      "column": 6,
+      "row": 13
+    },
+    "message": "`open` in text mode without explicit `encoding` argument",
+    "name": "unspecified-encoding",
+    "noqa_row": 13,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unspecified-encoding"
+  },
+  {
+    "cell": null,
+    "code": "PLR2044",
+    "end_location": {
+      "column": 62,
+      "row": 45
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_TestCloudinaryImageDeletion.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 62,
+            "row": 45
+          },
+          "location": {
+            "column": 59,
+            "row": 45
+          }
+        }
+      ],
+      "message": "Delete the empty comment"
+    },
+    "location": {
+      "column": 61,
+      "row": 45
+    },
+    "message": "Line with empty comment",
+    "name": "empty-comment",
+    "noqa_row": 45,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/empty-comment"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 40,
+      "row": 19
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_signals.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 19
+    },
+    "message": "Method `test_create_user_profile_signal` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 19,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 38,
+      "row": 25
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_signals.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 25
+    },
+    "message": "Method `test_save_user_profile_signal` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 25,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 47,
+      "row": 39
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_signals.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 39
+    },
+    "message": "Method `test_send_welcome_email_on_first_login` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 39,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 42,
+      "row": 56
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_signals.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 56
+    },
+    "message": "Method `test_delete_image_from_cloudinary` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 56,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 45,
+      "row": 40
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 40
+    },
+    "message": "Method `test_send_match_notification_success` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 40,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 40,
+      "row": 62
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 62
+    },
+    "message": "Method `test_send_welcome_email_success` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 62,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 42,
+      "row": 82
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 82
+    },
+    "message": "Method `test_send_welcome_email_exception` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 82,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 52,
+      "row": 96
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 96
+    },
+    "message": "Method `test_find_and_notify_matches_item_not_found` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 96,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 47,
+      "row": 130
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 130
+    },
+    "message": "Method `test_upload_images_unknown_object_type` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 130,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 53,
+      "row": 179
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 179
+    },
+    "message": "Method `test_delete_old_items_and_chats_no_old_items` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 179,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 17,
+      "row": 189
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_task.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 189
+    },
+    "message": "Method `clean_up` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 189,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 17,
+      "row": 25
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 25
+    },
+    "message": "Method `clean_up` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 25,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 17,
+      "row": 55
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 55
+    },
+    "message": "Method `clean_up` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 55,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 17,
+      "row": 145
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 145
+    },
+    "message": "Method `clean_up` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 145,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 63,
+      "row": 199
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 199
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 199,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 63,
+      "row": 206
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 206
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 206,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 17,
+      "row": 314
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 314
+    },
+    "message": "Method `clean_up` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 314,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 41,
+      "row": 464
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 464
+    },
+    "message": "Method `test_save_or_update_user_creates` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 464,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 52,
+      "row": 465
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 465
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 465,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 41,
+      "row": 479
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 479
+    },
+    "message": "Method `test_save_or_update_user_updates` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 479,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC0415",
+    "end_location": {
+      "column": 52,
+      "row": 480
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 480
+    },
+    "message": "`import` should be at the top-level of a file",
+    "name": "import-outside-top-level",
+    "noqa_row": 480,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/import-outside-top-level"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 27,
+      "row": 42
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 42
+    },
+    "message": "Method `test_vite_asset_js` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 42,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 28,
+      "row": 66
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 66
+    },
+    "message": "Method `test_vite_asset_css` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 66,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 38,
+      "row": 90
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 90
+    },
+    "message": "Method `test_vite_asset_missing_entry` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 90,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC1901",
+    "end_location": {
+      "column": 28,
+      "row": 92
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 26,
+      "row": 92
+    },
+    "message": "`result == \"\"` can be simplified to `not result` as an empty string is falsey",
+    "name": "compare-to-empty-string",
+    "noqa_row": 92,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/compare-to-empty-string"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 36,
+      "row": 113
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 113
+    },
+    "message": "Method `test_vite_asset_missing_css` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 113,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC1901",
+    "end_location": {
+      "column": 28,
+      "row": 115
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 26,
+      "row": 115
+    },
+    "message": "`result == \"\"` can be simplified to `not result` as an empty string is falsey",
+    "name": "compare-to-empty-string",
+    "noqa_row": 115,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/compare-to-empty-string"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 37,
+      "row": 136
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 136
+    },
+    "message": "Method `test_vite_asset_invalid_type` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 136,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLC1901",
+    "end_location": {
+      "column": 28,
+      "row": 138
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/tests/test_vite_tags.py",
+    "fix": null,
+    "location": {
+      "column": 26,
+      "row": 138
+    },
+    "message": "`result == \"\"` can be simplified to `not result` as an empty string is falsey",
+    "name": "compare-to-empty-string",
+    "noqa_row": 138,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/compare-to-empty-string"
+  },
+  {
+    "cell": null,
+    "code": "F401",
+    "end_location": {
+      "column": 18,
+      "row": 5
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 5
+          }
+        }
+      ],
+      "message": "Remove unused import: `cloudinary`"
+    },
+    "location": {
+      "column": 8,
+      "row": 5
+    },
+    "message": "`cloudinary` imported but unused",
+    "name": "unused-import",
+    "noqa_row": 5,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 70
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 70
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 70,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 28,
+      "row": 189
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 189
+    },
+    "message": "Method `schedule_match_task` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 189,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 245
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 245
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 245,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 264
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 264
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 264,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 346
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 346
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 346,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 391
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 391
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 391,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 8,
+      "row": 445
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 445
+    },
+    "message": "Try clause contains too many statements (8 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 445,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 8,
+      "row": 500
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 500
+    },
+    "message": "Try clause contains too many statements (13 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 500,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 13,
+      "row": 553
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 553
+    },
+    "message": "Method `post` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 553,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 584
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 584
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 584,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 15,
+      "row": 627
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 627
+    },
+    "message": "Method `delete` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 627,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 13,
+      "row": 643
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 643
+    },
+    "message": "Method `post` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 643,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 695
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 695
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 695,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 771
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 771
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 771,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLR6301",
+    "end_location": {
+      "column": 12,
+      "row": 805
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 805
+    },
+    "message": "Method `get` could be a function, class method, or static method",
+    "name": "no-self-use",
+    "noqa_row": 805,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/no-self-use"
+  },
+  {
+    "cell": null,
+    "code": "PLW0717",
+    "end_location": {
+      "column": 12,
+      "row": 806
+    },
+    "filename": "/home/luido/projects/qualidade/2024-2-AcheiUnB/API/users/views.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 806
+    },
+    "message": "Try clause contains too many statements (6 > 5)",
+    "name": "too-many-statements-in-try-clause",
+    "noqa_row": 806,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/too-many-statements-in-try-clause"
+  }
+]

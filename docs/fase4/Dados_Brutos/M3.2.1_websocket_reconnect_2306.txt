@@ -1,0 +1,41 @@
+=== I-13 (M3.2.1) Cenário de Reconexão do WebSocket ===
+Data: 2026-06-23
+Executor: Luis Eduardo Castro M Lima
+Método: MA3 ajustado para inspeção do código produtor da conexão
+        (instanciação real de chat exigia login MSAL com credenciais da UnB,
+        ver "Limites" na Fase 4 / index).
+
+== TRECHO INSPECIONADO (frontend) ==
+Arquivo: web/src/views/Chats.vue
+Linhas: 211-216
+
+const connectWebSocket = () => {
+  const WS_URL = import.meta.env.VITE_WS_URL;
+  socket.value = io(WS_URL, {
+    transports: ["websocket"],
+    path: "/socket.io/"
+  });
+  ...
+}
+
+Arquivo: web/src/views/Message.vue
+Linhas: 168-173 (estrutura equivalente)
+
+== ANÁLISE ==
+A biblioteca cliente é socket.io-client (função io()), que por padrão tem
+RECONEXÃO AUTOMÁTICA habilitada com backoff exponencial
+(reconnection=true, reconnectionAttempts=Infinity, reconnectionDelay=1000ms,
+reconnectionDelayMax=5000ms - valores padrão da biblioteca).
+
+O código não desabilita esses defaults e não implementa lógica manual
+concorrente. Há handlers para 'disconnect' e 'connect_error' apenas para
+log, não para suprimir reconexão.
+
+== VALOR DA MÉTRICA ==
+Sim - reconexão automática em até 60s ocorre por padrão do socket.io-client.
+
+== LIMITE DESTE ENSAIO ==
+Verificação empírica via cliente conectado exigiria login real Microsoft MSAL
+da UnB. A inspeção direta da configuração do cliente (esta seção) é equivalente
+para fins de auditoria, dado que socket.io-client publica essa semântica como
+contrato padrão da biblioteca.
