@@ -12,7 +12,9 @@ nas Fases 1, 2, 3 e 4. Todos os artefatos abaixo são públicos e podem ser cruz
 | GitPage | <https://fcte-qualidade-de-software-1.github.io/2026-1_T02_RADIA_PERLMAN/> |
 | Release EU1 | <https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/releases/tag/EU1> |
 | Release EU2 | <https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/releases/tag/EU2> |
-| Relatório técnico (PDF) | [pdf/relatorio-eu1.pdf](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/blob/main/pdf/relatorio-eu1.pdf) (anexado à release EU1) |
+| Release EU3 | <https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/releases/tag/EU3> |
+| Relatório técnico (PDF, EU3) | [pdf/relatorio-eu3.pdf](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/blob/main/pdf/relatorio-eu3.pdf) (anexado à release EU3) |
+| Dados brutos da Fase 4 | <https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/tree/main/docs/fase4/Dados_Brutos> |
 | Software avaliado (AcheiUnB) | <https://github.com/unb-mds/2024-2-AcheiUnB> |
 
 ## Atalhos da Fase 1
@@ -66,7 +68,6 @@ nas Fases 1, 2, 3 e 4. Todos os artefatos abaixo são públicos e podem ser cruz
 
 ## Próximos passos
 
-A partir da EU3, esta página passará a referenciar também:
-
-- *Release* EU3.
-- Eventuais revisões aos relatórios das fases anteriores.
+Com a EU3 entregue, esta página passa a integrar a versão consolidada do trabalho.
+Eventuais correções pós-entrega serão registradas como *patches* à *release* EU3 e
+indicadas aqui, com a respectiva versão e data.
