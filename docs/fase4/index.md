@@ -23,25 +23,26 @@ acionáveis para os stakeholders definidos na
 ## Estado da execução
 
 A execução seguiu a estratégia de **cobertura progressiva em anéis** da
-[Fase 1, §6.4](../fase1/06-escopo.md#64-plano-de-cobertura-progressiva): as coletas dos
-Anéis 1 e 2 (análise estática e inspeção documental, métodos MA1/MA2) foram priorizadas,
-e parte dos ensaios do Anel 3 (cenários dinâmicos em laboratório, método MA3) permanece
-pendente, conforme detalhado em [Obtenção das medidas](01-medidas.md).
+[Fase 1, §6.4](../fase1/06-escopo.md#64-plano-de-cobertura-progressiva): na EU2 as
+coletas dos Anéis 1 e 2 (análise estática e inspeção documental, métodos MA1/MA2)
+foram priorizadas e parte dos ensaios do Anel 3 (cenários dinâmicos em laboratório,
+método MA3) ficou pendente. Na EU3 todas as 7 instruções pendentes foram executadas
+e a coleta inválida de M2.1.1 (Ruff) foi **recoletada**, fechando o ciclo de
+medição.
 
-**Tabela 4.1: estado das instruções de coleta na entrega EU2.**
+**Tabela 4.1: estado das instruções de coleta na entrega EU3.**
 
 | Estado | Instruções | Métricas correspondentes |
 |---|---|---|
-| **Concluídas** | I-01, I-02, I-03, I-04, I-07, I-09, I-14 | M1.1.1, M1.1.2, M1.2.1, M1.2.2, M2.1.1, M2.2.1, M2.2.2, M3.2.2 |
-| **Pendentes** | I-05, I-06, I-08, I-10, I-11, I-12, I-13 | M1.3.1, M1.3.2, M2.1.2, M2.3.1, M2.3.2, M3.1.1, M3.2.1 |
+| **Concluídas na EU2** | I-01, I-02, I-03, I-04, I-07, I-09, I-14 | M1.1.1, M1.1.2, M1.2.1, M1.2.2, M2.2.1, M2.2.2, M3.2.2 |
+| **Concluídas na EU3** | I-05, I-06, I-08, I-10, I-11, I-12, I-13 | M1.3.1, M1.3.2, M2.1.2, M2.3.1, M2.3.2, M3.1.1, M3.2.1 |
+| **Recoletada na EU3** | I-07 (Ruff) | M2.1.1 (coleta da EU2 inválida; ver [§3.1](03-analise-resposta-gqm.md#31-sintese-dos-resultados)) |
 
-!!! info "Implicação das pendências"
-    As questões **Q1.3** (autenticação dinâmica), **Q2.3** (cobertura de testes) e
-    **Q3.1** (tolerância a falhas sob queda do Redis) ainda não dispõem de dados
-    suficientes para resposta definitiva; suas conclusões nesta entrega são parciais. A
-    conclusão da execução dessas instruções está registrada como ação prioritária nas
-    [sugestões de melhoria](05-julgamento-conclusoes.md), preservando a transparência
-    exigida pelo processo de avaliação.
+!!! success "Diagnóstico completo"
+    Na EU3, todas as **8 questões** GQM (Q1.1, Q1.2, Q1.3, Q2.1, Q2.2, Q2.3, Q3.1,
+    Q3.2) dispõem de dados auditáveis. O julgamento final
+    ([§5](05-julgamento-conclusoes.md)) é consolidado e suficiente para embasar as
+    decisões D1 e D2 declaradas na Fase 1.
 
 ## Rastreabilidade com as fases anteriores
 
@@ -60,6 +61,7 @@ pendente, conforme detalhado em [Obtenção das medidas](01-medidas.md).
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
 | 1.0 | 2026-06-12 | Versão inicial da visão geral da Fase 4, com estrutura, estado da execução e rastreabilidade. | Samuel Afonso | Davi Casseb, Letícia Hladczuk |
+| 2.0 | 2026-06-23 | Atualização para a EU3: Tabela 4.1 com as 7 instruções recém-concluídas e M2.1.1 recoletada; troca da nota de pendências por nota de diagnóstico completo. | Luis Eduardo Castro M Lima | Ana Joyce Guedes |
 
 ## Referências
 
