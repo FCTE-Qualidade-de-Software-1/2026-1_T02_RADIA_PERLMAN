@@ -48,24 +48,33 @@ F3-C8 da rubrica).
 
 ## 1.2 Regras gerais de execução (válidas para todas as instruções)
 
-1. **Snapshot fixo.** Todas as medições incidem sobre o *commit* fixado no início da
-   execução, registrado em `dados/00-snapshot.md` (hash completo, data e comando de
-   *checkout*). Nenhuma instrução pode ser executada sobre `main` flutuante
+1. **Snapshot fixo.** Todas as medições incidem sobre o estado do repositório do
+   AcheiUnB fixado no início da execução (branch `main`, *commit* registrado pelo
+   executor no momento da coleta). O hash do *commit* e a data de execução ficam
+   registrados na tabela de **Histórico de versão** de cada artefato da Fase 4 e no
+   catálogo de [Dados Brutos](../fase4/02-dados-brutos.md). Nenhuma instrução pode ser
+   executada sobre uma `main` em movimento durante a coleta
    ([Fase 1, §1.4](../fase1/01-proposito.md#14-cenario-de-aplicacao)).
 2. **Dados brutos primeiro.** A saída integral de cada ferramenta/cenário é salva no
-   diretório `dados/fase4/` do repositório da equipe **antes** de qualquer
-   consolidação, com o nome padronizado `<metrica>_<AAAA-MM-DD>.<ext>`
-   (ex.: `M1.2.1_bandit_2026-06-20.json`).
-3. **Registro de proveniência.** Cada arquivo de dado bruto é acompanhado de um
-   cabeçalho/arquivo `*.meta.md` com: executor, data/hora, versão da ferramenta,
-   comando exato executado e hash do *snapshot*.
-4. **Dupla execução.** Toda instrução MA1 é executada **duas vezes** pelo mesmo
-   avaliador; divergência entre execuções invalida a coleta e dispara investigação
-   (controle de repetibilidade). Instruções MA3 são executadas por um avaliador e
-   **assistidas/gravadas** por um segundo (controle de reprodutibilidade).
-5. **Sem correção do objeto.** O avaliador **não altera** o código do AcheiUnB. Ajustes
-   estritamente necessários para executar o ambiente (ex.: criação de `.env` local)
-   são documentados no `*.meta.md` e não contam como modificação do objeto avaliado.
+   diretório `docs/fase4/Dados_Brutos/` do repositório da equipe **antes** de qualquer
+   consolidação, com o nome padronizado `<metrica>_<ferramenta>_<DDMM>.<ext>`
+   (ex.: `M1.2.1_bandit_1206.html`). Arquivos JSON muito grandes podem ser
+   particionados (ex.: `.aa`, `.ab`) para caber no limite de tamanho do GitHub,
+   conforme indicado no catálogo da [seção 2 da Fase 4](../fase4/02-dados-brutos.md).
+3. **Registro de proveniência.** A proveniência de cada dado bruto (executor,
+   data, ferramenta/versão, instrução de coleta) é registrada de forma centralizada
+   no catálogo da [seção 2 da Fase 4](../fase4/02-dados-brutos.md) e no histórico de
+   versão de cada artefato. Comandos efetivamente executados são preservados no
+   próprio arquivo de saída (quando a ferramenta os emite) ou na descrição textual
+   da instrução em [Obtenção das Medidas](../fase4/01-medidas.md).
+4. **Dupla execução / segundo observador.** Toda instrução MA1 é executada e
+   conferida pelo executor; divergência entre execuções invalida a coleta e dispara
+   investigação (controle de repetibilidade). Instruções MA3 são executadas por um
+   avaliador e **assistidas/gravadas** por um segundo (controle de reprodutibilidade).
+5. **Sem correção do objeto.** O avaliador **não altera** o código do AcheiUnB.
+   Ajustes estritamente necessários para executar o ambiente (ex.: criação de `.env`
+   local, geração de massa de dados sintética) são registrados no histórico de
+   versão da Fase 4 e não contam como modificação do objeto avaliado.
 6. **Julgamento adiado.** A comparação dos valores com os níveis de pontuação da
    [Fase 2, §5](../fase2/05-niveis-pontuacao.md) ocorre apenas na Fase 4; durante a
    coleta registra-se somente o valor medido.
@@ -79,7 +88,7 @@ clonado do AcheiUnB, salvo indicação contrária.
 ### I-01 (M1.1.1): varredura de segredos
 
 1. Executar a varredura automatizada no *snapshot*:
-   `trufflehog git file://. --branch <commit-fixado> --json > dados/fase4/M1.1.1_trufflehog_<data>.json`
+   `trufflehog git file://. --branch <commit-fixado> --json > docs/fase4/Dados_Brutos/M1.1.1_trufflehog_<DDMM>.json`
 2. Executar a inspeção manual complementar: abrir `API/AcheiUnB/settings.py` e
    registrar, em formulário próprio, toda atribuição literal de `SECRET_KEY`, senhas,
    tokens ou chaves de API (arquivo, linha, tipo do segredo).
@@ -101,7 +110,7 @@ clonado do AcheiUnB, salvo indicação contrária.
 
 ### I-03 (M1.2.1): execução do Bandit
 
-1. Executar: `bandit -r API/ -f json -o dados/fase4/M1.2.1_bandit_<data>.json`
+1. Executar: `bandit -r API/ -f json -o docs/fase4/Dados_Brutos/M1.2.1_bandit_<DDMM>.json`
    (mesma raiz de varredura usada pelo CI do AcheiUnB).
 2. Filtrar os achados com `issue_severity` igual a `MEDIUM` ou `HIGH`.
 3. Registrar o **valor da métrica**: contagem de achados após o filtro. Achados
@@ -158,7 +167,7 @@ clonado do AcheiUnB, salvo indicação contrária.
 ### I-07 (M2.1.1): execução do Ruff
 
 1. Executar com a configuração **do próprio projeto** (`pyproject.toml` do AcheiUnB),
-   sem regras adicionais: `ruff check API/ --output-format json > dados/fase4/M2.1.1_ruff_<data>.json`
+   sem regras adicionais: `ruff check API/ --output-format json > docs/fase4/Dados_Brutos/M2.1.1_ruff_<DDMM>.json`
 2. **Valor da métrica:** número total de violações reportadas.
 3. **Saída registrada:** JSON integral + versão do Ruff utilizada (deve ser a mesma
    fixada no CI do AcheiUnB; divergência é registrada no `*.meta.md`).
@@ -166,9 +175,9 @@ clonado do AcheiUnB, salvo indicação contrária.
 ### I-08 (M2.1.2): mapa de dependências entre *apps*
 
 1. No contêiner do *backend*, gerar o grafo de modelos/dependências com
-   `django-extensions`: `python manage.py graph_models -a -o dados/fase4/M2.1.2_grafo_<data>.png`
+   `django-extensions`: `python manage.py graph_models -a -o docs/fase4/Dados_Brutos/M2.1.2_grafo_<DDMM>.png`
 2. Complementar com análise de *imports* entre *apps* (`users`, `chat`, `reports`,
-   `support`): `grep -rn "from API\.\|import API\." API/ > dados/fase4/M2.1.2_imports_<data>.txt`
+   `support`): `grep -rn "from API\.\|import API\." API/ > docs/fase4/Dados_Brutos/M2.1.2_imports_<DDMM>.txt`
    e montar a matriz de dependência app × app.
 3. **Valor da métrica:** número de **ciclos** identificados na matriz (A depende de B e
    B depende de A, direta ou transitivamente).
@@ -176,7 +185,7 @@ clonado do AcheiUnB, salvo indicação contrária.
 
 ### I-09 (M2.2.1 e M2.2.2): complexidade ciclomática com Radon
 
-1. Executar: `radon cc API/ -s -j > dados/fase4/M2.2_radon_<data>.json`
+1. Executar: `radon cc API/ -s -j > docs/fase4/Dados_Brutos/M2.2_radon_<DDMM>.json`
 2. Calcular **M2.2.1** (média da complexidade por função/método em todo o *backend*) e
    **M2.2.2** (contagem de funções/métodos com complexidade > 10) a partir do JSON, por
    *script* de consolidação versionado em `scripts/consolida_radon.py`.
@@ -186,7 +195,7 @@ clonado do AcheiUnB, salvo indicação contrária.
 ### I-10 (M2.3.1): cobertura de testes do *backend*
 
 1. No contêiner do *backend*, executar a suíte com cobertura:
-   `pytest --cov=API --cov-report=xml:dados/fase4/M2.3.1_coverage_<data>.xml --cov-report=term`
+   `pytest --cov=API --cov-report=xml:docs/fase4/Dados_Brutos/M2.3.1_coverage_<DDMM>.xml --cov-report=term`
 2. Registrar o percentual de **line coverage** total e a tabela por módulo.
 3. Em caso de testes falhando por dependência de ambiente, registrar quais e por quê;
    o percentual reportado deve indicar explicitamente a base de testes executada.
@@ -195,7 +204,7 @@ clonado do AcheiUnB, salvo indicação contrária.
 ### I-11 (M2.3.2): contagem de testes no *frontend*
 
 1. Executar a busca padronizada em `web/`:
-   `find web/src -type f \( -name "*.spec.*" -o -name "*.test.*" \) | tee dados/fase4/M2.3.2_frontend_<data>.txt`
+   `find web/src -type f \( -name "*.spec.*" -o -name "*.test.*" \) | tee docs/fase4/Dados_Brutos/M2.3.2_frontend_<DDMM>.txt`
 2. Verificar também a existência de diretórios `tests/`/`__tests__/` e de *script* de
    teste no `web/package.json`.
 3. **Valor da métrica:** número de arquivos de teste encontrados.
@@ -233,7 +242,7 @@ Roteiro de cenário (executar com gravação de tela ativa):
 
 ### I-14 (M3.2.2): inspeção de `retry` em tarefas Celery
 
-1. Localizar todas as definições de tarefa: `grep -rn "@shared_task\|@app.task" API/ | tee dados/fase4/M3.2.2_tasks_<data>.txt`
+1. Localizar todas as definições de tarefa: `grep -rn "@shared_task\|@app.task" API/ | tee docs/fase4/Dados_Brutos/M3.2.2_tasks_<DDMM>.txt`
 2. Para cada tarefa encontrada, inspecionar e registrar em formulário: nome, módulo,
    presença de `autoretry_for`/`retry_backoff`/`max_retries`/chamada explícita a
    `self.retry()` ou tratamento `try...except` com reenfileiramento.
@@ -250,13 +259,14 @@ Roteiro de cenário (executar com gravação de tela ativa):
 | Versões de ferramentas fixadas ([seção 2.3](02-recursos-ambiente.md#23-software)) | Elimina variação do instrumento de medição. |
 | Comandos literais e checklists fechados | Elimina ambiguidade de procedimento; o avaliador não decide "como" medir durante a coleta. |
 | Dupla execução (MA1) e segundo observador (MA3) | Detecta variação residual e erro humano. |
-| Dados brutos + `*.meta.md` versionados | Permitem auditoria externa e reexecução por terceiros (premissa de dados auditáveis da disciplina). |
+| Dados brutos versionados e catalogados na [Fase 4, §2](../fase4/02-dados-brutos.md) | Permitem auditoria externa e reexecução por terceiros (premissa de dados auditáveis da disciplina). |
 
 ## Histórico de versão
 
 | Versão | Data       | Descrição | Autor(es) | Revisor(es) |
 | :-- | :-- | :-- | :-- | :-- |
 | 1.0 | 2026-06-12 | Definição dos métodos de avaliação e das instruções de coleta por métrica. | Davi Casseb | Letícia Hladczuk |
+| 2.0 | 2026-06-23 | Ajuste das Regras Gerais (§1.2) e dos caminhos das instruções (§1.3) para refletir a estrutura efetivamente entregue (`docs/fase4/Dados_Brutos/`, padrão `_<DDMM>`), conforme observação dos pares na EU2. | Luis Eduardo Castro M Lima, Davi Casseb | Letícia Hladczuk |
 
 ## Referências
 
