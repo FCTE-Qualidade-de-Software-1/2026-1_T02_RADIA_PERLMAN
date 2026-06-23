@@ -9,7 +9,7 @@ Esta representação gráfica serve como um mapa de referência rápido para tod
 O diagrama a seguir abrange os três objetivos priorizados: Segurança (G1), Manutenibilidade (G2) e Confiabilidade (G3).
 
 ```mermaid
-graph TD
+graph LR
     subgraph GQM Hierarchy - AcheiUnB Quality Evaluation
 
         %% Goals

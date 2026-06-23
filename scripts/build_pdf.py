@@ -13,8 +13,8 @@ Uso:
 
 Saídas:
     _pdf_docs/                  cópia processada de docs/ usada como entrada do MkDocs
-    _pdf_docs/img/diagrams/*.svg diagramas renderizados (persistem entre builds)
-    site/pdf/relatorio-eu1.pdf  PDF final
+    _pdf_docs/img/diagrams/*.png diagramas renderizados (persistem entre builds)
+    site/pdf/relatorio-eu3.pdf  PDF final
 """
 
 from __future__ import annotations
@@ -154,7 +154,7 @@ def main() -> None:
     )
     if build.returncode != 0:
         fail("mkdocs build falhou.")
-    print("[build_pdf] PDF gerado em site/pdf/relatorio-eu1.pdf")
+    print("[build_pdf] PDF gerado em site/pdf/relatorio-eu3.pdf")
 
 
 if __name__ == "__main__":

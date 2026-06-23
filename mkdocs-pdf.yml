@@ -10,9 +10,9 @@ plugins:
       author: Equipe T02 RADIA PERLMAN
       cover: true
       cover_title: Avaliação da Qualidade do AcheiUnB
-      cover_subtitle: FGA315 Qualidade de Software 1 - EU1 - 2026/1
+      cover_subtitle: FGA315 Qualidade de Software 1 - EU3 - 2026/1
       toc_title: Sumário
-      output_path: pdf/relatorio-eu1.pdf
+      output_path: pdf/relatorio-eu3.pdf
       render_js: false
       ordered_chapter_level: 0
       toc_level: 3

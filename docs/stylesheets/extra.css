@@ -42,6 +42,16 @@
   .md-typeset details > summary {
     padding-left: 0.8rem !important;
   }
+
+  /* Impede imagens muito altas de cortar o resto do conteúdo no WeasyPrint.
+     Sem limite de altura, o diagrama GQM (5814 px de altura) ocupava a página
+     inteira e interrompia a paginação. */
+  .md-typeset img {
+    max-width: 100%;
+    max-height: 24cm;
+    object-fit: contain;
+    page-break-inside: avoid;
+  }
 }
 
 /* Grid de integrantes na página equipe.md (3 em cima, 3 embaixo) */
