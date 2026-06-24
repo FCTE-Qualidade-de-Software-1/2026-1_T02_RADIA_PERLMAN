@@ -3,7 +3,7 @@
 !!! note "Snapshot do objeto avaliado"
     Todas as medições desta seção incidem sobre o **commit fixado**
     `e91773380c5259007d748d85e998a27362537339` (branch `main` do `unb-mds/2024-2-AcheiUnB`),
-    registrado em [`dados/00-snapshot.md`](../../dados/00-snapshot.md). A fixação por hash
+    registrado em [`dados/00-snapshot.md`](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_RADIA_PERLMAN/blob/main/dados/00-snapshot.md). A fixação por hash
     garante a repetibilidade e a auditoria exigidas pela Fase 3.
 
 ---
