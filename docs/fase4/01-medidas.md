@@ -1,5 +1,11 @@
 # Obtenção de Medidas
 
+!!! note "Snapshot do objeto avaliado"
+    Todas as medições desta seção incidem sobre o **commit fixado**
+    `e91773380c5259007d748d85e998a27362537339` (branch `main` do `unb-mds/2024-2-AcheiUnB`),
+    registrado em [`dados/00-snapshot.md`](../../dados/00-snapshot.md). A fixação por hash
+    garante a repetibilidade e a auditoria exigidas pela Fase 3.
+
 ---
 
 ### Segurança e Configurações (M1)
@@ -57,7 +63,7 @@
 
 * **I-09 (M2.2.1 e M2.2.2) | Complexidade Ciclomática:**
 * **Ferramenta:** `Radon`
-* **Resultado:** **Excelente.** Foram analisados 350 blocos de código (classes, funções e métodos), alcançando uma **nota média A** (score de 2.75).
+* **Resultado:** **Regular (boa média, com pontos de atenção).** Foram analisados 350 blocos de código (classes, funções e métodos), alcançando uma **nota média A** (score de 2.75 - M2.2.1). Entretanto, **5 blocos** possuem complexidade ciclomática > 10 (grau C: `UserProfileView`, `UserListView`, `UserProfileView.get`, `UserListView.get` e `ReportViewSet._get_reported_user` - M2.2.2). Pelo critério conjunto da Fase 2 §5 (média < 5 **e** contagem(>10) entre 1 e 5), o julgamento combinado é **Regular**, conforme detalhado na [análise §3.3](03-analise-resposta-gqm.md).
 
 
 * **I-10 (M2.3.1) | Cobertura de Testes (Backend):**

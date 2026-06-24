@@ -6,7 +6,7 @@ Os dados brutos coletados na execução da avaliação estão armazenados no dir
 
 | Arquivo (Dado Bruto) | Métrica | Instrução | Ferramenta / Método |
 | :--- | :--- | :--- | :--- |
-| `M1.1.1_trufflehog_1206.json.aa` a `.ae` | M1.1.1 | I-01 | Trufflehog (relatório JSON dividido em partes devido ao tamanho) |
+| `M1.1.1_trufflehog_consolidado.md` | M1.1.1 | I-01 | Trufflehog (achado consolidado e triado; 2.497 falsos positivos categorizados, 0 segredos confirmados) |
 | `M1.2.1_bandit_1206.html` | M1.2.1 | I-03 | Bandit (relatório HTML de varredura) |
 | `Screenshot 2026-06-12 at 20-47-18 Bandit Report.png` | M1.2.1 | I-03 | Bandit (captura de tela do sumário) |
 | `M1.3.1_cookie_attrs_2306.txt` | M1.3.1 | I-05 | Inspeção do produtor do cookie (`API/users/views.py`) |
@@ -19,6 +19,7 @@ Os dados brutos coletados na execução da avaliação estão armazenados no dir
 | `M2.2_radon_1206.txt` | M2.2.1, M2.2.2 | I-09 | Radon (saída raw em texto do terminal) |
 | `M2.3.1_coverage_2306.txt` | M2.3.1 | I-10 | `coverage report` (saída textual) |
 | `M2.3.1_coverage_2306.xml` | M2.3.1 | I-10 | `coverage xml` (relatório estruturado) |
+| `M2.3.2_frontend_2306.txt` | M2.3.2 | I-11 | Busca por `*.spec.*`/`*.test.*` em `web/src/` e inspeção do `package.json` |
 | `M3.1.1_redis_kill_2306.txt` | M3.1.1 | I-12 | Roteiro de queda do Redis (logs + sondagens HTTP) |
 | `M3.2.1_websocket_reconnect_2306.txt` | M3.2.1 | I-13 | Inspeção do produtor da conexão `socket.io-client` |
 | `M3.2.2_tasks_1206.txt` | M3.2.2 | I-14 | Inspeção de Celery Tasks (evidência textual) |
